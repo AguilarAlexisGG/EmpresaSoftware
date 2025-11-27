@@ -218,7 +218,7 @@ if check_password():
                     title={'text': "Defectos por Proyecto"},
                     delta={'reference': 10, 'increasing': {'color': "red"}}
                 ))
-                fig.update_layout(height=200)
+                fig.update_layout(height=250)
                 st.plotly_chart(fig, use_container_width=True)
                 
                 # Severity pie chart - CAMBIO: Tamaño aumentado 200→350px
@@ -242,7 +242,7 @@ if check_password():
                     title={'text': "Resolución Promedio"},
                     delta={'reference': 3, 'increasing': {'color': "red"}}
                 ))
-                fig.update_layout(height=200)
+                fig.update_layout(height=250)
                 st.plotly_chart(fig, use_container_width=True)
                 st.caption(f"📋 {resol['metadata']['total_defects']} defectos totales")
             
@@ -605,18 +605,6 @@ if check_password():
                         sev_df = pd.DataFrame(list(prediction['severity_distribution'].items()),
                                              columns=['Severidad', 'Defectos'])
                         
-                        fig_sev = px.pie(
-                            sev_df,
-                            values='Defectos',
-                            names='Severidad',
-                            title="Distribución Estimada",
-                            color_discrete_sequence=px.colors.sequential.RdYlGn_r
-                        )
-                        fig_sev.update_layout(height=400)
-                        st.plotly_chart(fig_sev, use_container_width=True)
-                    
-                    # Summary table
-                    st.markdown("---")
                     st.subheader("📋 Resumen y Recomendaciones")
                     
                     summary_df = pd.DataFrame({
