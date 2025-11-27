@@ -3,7 +3,6 @@ import pandas as pd
 import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
-from datetime import datetime, timedelta
 
 # Import DSS modules
 from olap_functions import slice_olap, dice, calculate_metric_trend
@@ -12,20 +11,17 @@ from kpi_calculator import (
 )
 from balanced_scorecard import (
     generate_okrs_from_data, calculate_perspective_score,
-    create_okr_hierarchy, get_perspective_icon, format_okr_table
+    create_okr_hierarchy, create_strategy_map_data,
+    get_perspective_icon, format_okr_table
 )
 from rayleigh_model import (
     calibrate_rayleigh_sigma, predict_defects_rayleigh,
     generate_rayleigh_curve, recommend_qa_resources,
     calculate_model_confidence, validate_prediction_inputs
 )
-from material_icons import load_material_icons, get_icon, icon
 
 # --- CONFIGURACIÓN DE PÁGINA ---
 st.set_page_config(page_title="Sistema de Soporte a Decisiones", layout="wide", page_icon="📊")
-
-# Load Material Icons
-load_material_icons()
 
 # --- AUTENTICACIÓN ---
 def check_password():
@@ -43,7 +39,6 @@ def check_password():
         st.session_state["authentication_status"] = None
     
     if not st.session_state["authentication_status"]:
-        st.markdown(f"{get_icon('login', 'large')} **Iniciar Sesión**", unsafe_allow_html=True)
         st.text_input("Usuario", key="username")
         st.text_input("Contraseña", type="password", on_change=password_entered, key="password")
         
@@ -76,9 +71,9 @@ if check_password():
     
     if df_proy is not None and df_cal is not None:
         
-        # SIDEBAR - User Info
-        st.sidebar.markdown(f"{get_icon('login', 'small')} **{st.session_state.get('username', 'Usuario')}**", unsafe_allow_html=True)
-        if st.sidebar.button("Cerrar Sesión"):
+        # SIDEBAR - User Info and Navigation
+        st.sidebar.success(f"👤 {st.session_state.get('username', 'Usuario')}")
+        if st.sidebar.button("🚪 Cerrar Sesión"):
             st.session_state["authentication_status"] = None
             if "current_user" in st.session_state:
                 del st.session_state["current_user"]
@@ -87,83 +82,43 @@ if check_password():
         st.sidebar.markdown("---")
         
         # NAVIGATION
-        st.sidebar.markdown(f"## {get_icon('dashboard', 'medium')} DSS", unsafe_allow_html=True)
+        st.sidebar.header("📊 Sistema de Soporte de Decisiones")
         section = st.sidebar.radio(
             "Navegación",
-            [
-                f"{get_icon('analytics', 'small')} KPIs Operacionales",
-                f"{get_icon('targets', 'small')} OKRs - Balanced Scorecard",
-                f"{get_icon('predictions', 'small')} Predicción Rayleigh"
-            ],
-            format_func=lambda x: x,
-            label_visibility="visible",
-            key="navigation"
+            ["🎯 KPIs - Indicadores Operacionales", 
+             "📈 OKRs - Balanced Scorecard",
+             "🔮 Predicción de Defectos (Rayleigh)"]
         )
         
         st.sidebar.markdown("---")
-        
-        st.sidebar.markdown("---")
-        
-        # FILTROS GLOBALES
-        st.sidebar.markdown(f"## {get_icon('filter', 'medium')} Filtros", unsafe_allow_html=True)
-        
-        # Filtro por cliente
-        clientes = ["Todos"] + sorted(df_proy['nombre_cliente'].unique().tolist())
-        cliente_sel = st.sidebar.selectbox(
-            "🏢 Cliente",
-            clientes
-        )
-        
-        # Filtro por país
-        paises = ["Todos"] + sorted(df_proy['nombre_pais'].unique().tolist())
-        pais_sel = st.sidebar.selectbox(
-            "🌍 País",
-            paises
-        )
-        
-        # Aplicar filtros
-        df_proy_f = df_proy.copy()
-        df_cal_f = df_cal.copy()
-        
-        if cliente_sel != "Todos":
-            df_proy_f = df_proy_f[df_proy_f['nombre_cliente'] == cliente_sel]
-            # Filtrar calidad por proyectos del cliente
-            proyectos_cliente = df_proy_f['nombre_proyecto'].unique()
-            df_cal_f = df_cal_f[df_cal_f['nombre_proyecto'].isin(proyectos_cliente)]
-        
-        if pais_sel != "Todos":
-            df_proy_f = df_proy_f[df_proy_f['nombre_pais'] == pais_sel]
-            proyectos_pais = df_proy_f['nombre_proyecto'].unique()
-            df_cal_f = df_cal_f[df_cal_f['nombre_proyecto'].isin(proyectos_pais)]
+        st.sidebar.header("⚙️ Filtros Globales")
         
         # Main title
-        st.markdown(f"# {get_icon('dashboard', 'large')} Sistema de Soporte a Decisiones", unsafe_allow_html=True)
+        st.title("📊 Sistema de Soporte a Decisiones (DSS)")
         
         # ========================================================================
         # SECTION 1: KPIs DASHBOARD
         # ========================================================================
-        if "KPIs" in section:
-            st.markdown(f"## {get_icon('analytics', 'large')} KPIs - Indicadores Clave de Rendimiento", unsafe_allow_html=True)
+        if section == "🎯 KPIs - Indicadores Operacionales":
+            st.header("🎯 KPIs - Indicadores Clave de Rendimiento")
             st.markdown("Métricas operacionales en tiempo real para decisiones tácticas")
             
             # Filters
-            col_f1, col_f2 = st.columns([1, 4])
+            col_f1, col_f2, col_f3 = st.columns(3)
             with col_f1:
-                if st.button("🔄 Refrescar"):
-                    st.cache_data.clear()
-                    st.rerun()
+                refresh = st.button("🔄 Refrescar Datos")
             
             st.markdown("---")
             
             # Calculate all KPIs
-            kpis = calculate_all_kpis(df_proy_f, df_cal_f)
+            kpis = calculate_all_kpis(df_proy, df_cal)
             
-            # Display KPIs in grid
+            # Display KPIs in grid (3 columns x 2 rows)
             col1, col2, col3 = st.columns(3)
             
             # Row 1
             with col1:
-                st.markdown(f"### {get_icon('completion', 'medium')} Tasa de Completación", unsafe_allow_html=True)
+                st.subheader("📊 Tasa de Completación")
                 comp = kpis['completion_rate']
                 color = get_kpi_color(comp['value'], 'completion_rate')
                 
@@ -180,15 +135,20 @@ if check_password():
                             {'range': [0, 50], 'color': "lightcoral"},
                             {'range': [50, 80], 'color': "lightyellow"},
                             {'range': [80, 100], 'color': "lightgreen"}
-                        ]
+                        ],
+                        'threshold': {
+                            'line': {'color': "red", 'width': 4},
+                            'thickness': 0.75,
+                            'value': 90
+                        }
                     }
                 ))
-                fig.update_layout(height=300)
+                fig.update_layout(height=250)
                 st.plotly_chart(fig, use_container_width=True)
-                st.caption(f"✓ {comp['metadata']['completed']} de {comp['metadata']['total']} proyectos")
+                st.caption(f"✅ {comp['metadata']['completed']} de {comp['metadata']['total']} proyectos")
             
             with col2:
-                st.markdown(f"### {get_icon('budget', 'medium')} Eficiencia Presupuestaria", unsafe_allow_html=True)
+                st.subheader("💰 Eficiencia Presupuestaria")
                 budget = kpis['budget_efficiency']
                 
                 fig = go.Figure(go.Indicator(
@@ -206,12 +166,12 @@ if check_password():
                         ]
                     }
                 ))
-                fig.update_layout(height=300)
+                fig.update_layout(height=250)
                 st.plotly_chart(fig, use_container_width=True)
-                st.caption(f"ROI: {budget['metadata']['avg_roi']:.1f}%")
+                st.caption(f"💵 ROI: {budget['metadata']['avg_roi']:.1f}%")
             
             with col3:
-                st.markdown(f"### {get_icon('team', 'medium')} Utilización de Equipo", unsafe_allow_html=True)
+                st.subheader("👥 Utilización de Equipo")
                 util = kpis['team_utilization']
                 
                 fig = go.Figure(go.Indicator(
@@ -229,15 +189,15 @@ if check_password():
                         ]
                     }
                 ))
-                fig.update_layout(height=300)
+                fig.update_layout(height=250)
                 st.plotly_chart(fig, use_container_width=True)
-                st.caption(f"{util['metadata']['unique_clients']} clientes únicos")
+                st.caption(f"🏢 {util['metadata']['unique_clients']} clientes únicos")
             
-            # Row 2 - Tamaños más grandes
+            # Row 2
             col4, col5, col6 = st.columns(3)
             
             with col4:
-                st.markdown(f"### {get_icon('bugs', 'medium')} Densidad de Defectos", unsafe_allow_html=True)
+                st.subheader("🐛 Densidad de Defectos")
                 defect = kpis['defect_density']
                 
                 fig = go.Figure(go.Indicator(
@@ -248,20 +208,20 @@ if check_password():
                     title={'text': "Defectos por Proyecto"},
                     delta={'reference': 10, 'increasing': {'color': "red"}}
                 ))
-                fig.update_layout(height=250)
+                fig.update_layout(height=200)
                 st.plotly_chart(fig, use_container_width=True)
                 
-                # Severity pie chart - TAMAÑO AUMENTADO
+                # Severity pie chart
                 if defect['metadata']['severity_breakdown']:
                     sev_df = pd.DataFrame(list(defect['metadata']['severity_breakdown'].items()),
                                          columns=['Severidad', 'Cantidad'])
                     fig_pie = px.pie(sev_df, values='Cantidad', names='Severidad',
                                     title="Distribución por Severidad", hole=0.4)
-                    fig_pie.update_layout(height=350)  # Aumentado de 200 a 350
+                    fig_pie.update_layout(height=200)
                     st.plotly_chart(fig_pie, use_container_width=True)
             
             with col5:
-                st.markdown(f"### {get_icon('time', 'medium')} Tiempo de Resolución", unsafe_allow_html=True)
+                st.subheader("⏱️ Tiempo de Resolución")
                 resol = kpis['avg_resolution_time']
                 
                 fig = go.Figure(go.Indicator(
@@ -272,30 +232,19 @@ if check_password():
                     title={'text': "Resolución Promedio"},
                     delta={'reference': 3, 'increasing': {'color': "red"}}
                 ))
-                fig.update_layout(height=250)
+                fig.update_layout(height=200)
                 st.plotly_chart(fig, use_container_width=True)
-                
-                # Bar chart por severidad - TAMAÑO AUMENTADO
-                if resol['metadata']['resolution_by_severity']:
-                    sev_data = pd.DataFrame([
-                        {'Severidad': k, 'Días': v['days'], 'Cantidad': v['count']}
-                        for k, v in resol['metadata']['resolution_by_severity'].items()
-                    ])
-                    fig_bar = px.bar(sev_data, x='Severidad', y='Días',
-                                    title="Tiempo por Severidad",
-                                    color='Cantidad', color_continuous_scale='Reds')
-                    fig_bar.update_layout(height=350)  # Aumentado de 200 a 350
-                    st.plotly_chart(fig_bar, use_container_width=True)
+                st.caption(f"📋 {resol['metadata']['total_defects']} defectos totales")
             
             with col6:
-                st.markdown(f"### {get_icon('satisfaction', 'medium')} Satisfacción Cliente", unsafe_allow_html=True)
+                st.subheader("⭐ Índice de Satisfacción")
                 satisfaction = kpis['client_satisfaction']
                 
                 fig = go.Figure(go.Indicator(
                     mode="gauge+number",
                     value=satisfaction['value'],
                     domain={'x': [0, 1], 'y': [0, 1]},
-                    title={'text': "Índice de Satisfacción"},
+                    title={'text': "Satisfacción Cliente"},
                     gauge={
                         'axis': {'range': [0, 100]},
                         'bar': {'color': "purple"},
@@ -306,49 +255,39 @@ if check_password():
                         ]
                     }
                 ))
-                fig.update_layout(height=300)
+                fig.update_layout(height=250)
                 st.plotly_chart(fig, use_container_width=True)
-                st.caption(f"Calidad: {satisfaction['metadata']['quality_component']:.1f} | "
-                          f"Presupuesto: {satisfaction['metadata']['budget_component']:.1f}")
+                st.caption(f"📊 Calidad: {satisfaction['metadata']['quality_component']:.1f} | "
+                          f"💰 Presupuesto: {satisfaction['metadata']['budget_component']:.1f}")
         
         # ========================================================================
         # SECTION 2: OKRs & BALANCED SCORECARD
         # ========================================================================
-        elif "OKRs" in section:
-            st.markdown(f"## {get_icon('targets', 'large')} OKRs & Balanced Scorecard", unsafe_allow_html=True)
+        elif section == "📈 OKRs - Balanced Scorecard":
+            st.header("📈 OKRs & Balanced Scorecard")
             st.markdown("Marco estratégico alineado con la visión y misión empresarial")
             
             # Generate OKRs
-            okrs = generate_okrs_from_data(df_proy_f, df_cal_f, "Q1 2025")
+            okrs = generate_okrs_from_data(df_proy, df_cal, "Q1 2025")
             
             # Scorecard Overview
-            st.subheader(f"{get_icon('targets', 'medium')} Balanced Scorecard - Vista General")
+            st.subheader("🎯 Balanced Scorecard - Vista General")
             
             perspectives = ["Financial", "Customer", "Internal Processes", "Learning & Growth"]
             cols = st.columns(4)
             
             for i, perspective in enumerate(perspectives):
                 score, meta = calculate_perspective_score(okrs, perspective)
-                icon_name = get_perspective_icon(perspective)
+                icon = get_perspective_icon(perspective)
                 
                 with cols[i]:
-                    # Usar icon HTML
-                    if perspective == "Financial":
-                        ic = get_icon('financial', 'small')
-                    elif perspective == "Customer":
-                        ic = get_icon('customer', 'small')
-                    elif perspective == "Internal Processes":
-                        ic = get_icon('processes', 'small')
-                    else:
-                        ic = get_icon('learning', 'small')
-                    
-                    st.markdown(f"**{ic} {perspective}**", unsafe_allow_html=True)
                     st.metric(
-                        label="Progreso",
+                        label=f"{icon} {perspective}",
                         value=f"{score:.0f}%",
                         delta=f"{meta['okr_count']} OKRs"
                     )
                     
+                    # Progress bar
                     if score >= 90:
                         color = "green"
                     elif score >= 70:
@@ -361,71 +300,35 @@ if check_password():
             
             st.markdown("---")
             
-            # Tabs - SOLO JERARQUÍA (sin Mapa Estratégico)
-            tab1, tab2 = st.tabs([
-                f"{get_icon('info', 'small')} OKRs Detallados",
-                f"{get_icon('insights', 'small')} Jerarquía OKR"
-            ])
+            # OKR Details Tabs
+            tab1, tab2, tab3 = st.tabs(["📋 OKRs Detallados", "🌳 Jerarquía OKR", "🗺️ Mapa Estratégico"])
             
             with tab1:
-                st.subheader("Progreso de OKRs por Perspectiva")
+                st.subheader("OKRs por Perspectiva")
                 
-                # GRÁFICAS TEMPORALES DE PROGRESO
                 for perspective in perspectives:
                     perspective_okrs = [okr for okr in okrs if okr.perspective == perspective]
                     
                     if perspective_okrs:
-                        if perspective == "Financial":
-                            ic = get_icon('financial', 'small')
-                        elif perspective == "Customer":
-                            ic = get_icon('customer', 'small')
-                        elif perspective == "Internal Processes":
-                            ic = get_icon('processes', 'small')
-                        else:
-                            ic = get_icon('learning', 'small')
-                        
-                        st.markdown(f"### {ic} {perspective}", unsafe_allow_html=True)
+                        icon = get_perspective_icon(perspective)
+                        st.markdown(f"### {icon} {perspective}")
                         
                         for okr in perspective_okrs:
-                            # Crear datos temporales simulados (últimos 6 meses)
-                            months = pd.date_range(end=datetime.now(), periods=6, freq='M')
-                            
-                            # Simular progreso creciente hacia el valor actual
-                            progress_data = []
-                            for kr in okr.key_results:
-                                monthly_progress = []
-                                for i, month in enumerate(months):
-                                    # Progreso simulado: crece gradualmente hasta el valor actual
-                                    simulated_progress = kr.progress * (i + 1) / 6
-                                    monthly_progress.append({
-                                        'Mes': month.strftime('%b %Y'),
-                                        'Progreso': simulated_progress,
-                                        'Key Result': kr.kr[:40] + '...' if len(kr.kr) > 40 else kr.kr
-                                    })
-                                progress_data.extend(monthly_progress)
-                            
-                            df_progress = pd.DataFrame(progress_data)
-                            
-                            # Gráfica de líneas temporal
-                            fig = px.line(
-                                df_progress,
-                                x='Mes',
-                                y='Progreso',
-                                color='Key Result',
-                                title=f"{okr.objective} ({okr.owner})",
-                                markers=True
-                            )
-                            fig.add_hline(y=90, line_dash="dash", line_color="green", 
-                                        annotation_text="Meta 90%")
-                            fig.update_layout(
-                                yaxis_title="Progreso (%)",
-                                yaxis_range=[0, 100],
-                                height=400
-                            )
-                            st.plotly_chart(fig, use_container_width=True)
+                            with st.expander(f"**{okr.objective}** ({okr.owner}) - {okr.status}"):
+                                for kr in okr.key_results:
+                                    col_kr1, col_kr2 = st.columns([3, 1])
+                                    
+                                    with col_kr1:
+                                        st.write(f"🎯 {kr.kr}")
+                                        st.progress(kr.progress/100)
+                                    
+                                    with col_kr2:
+                                        st.metric("Progreso", f"{kr.progress:.0f}%")
+                                        st.caption(f"Meta: {kr.target}{kr.unit}")
+                                        st.caption(f"Actual: {kr.current:.1f}{kr.unit}")
             
             with tab2:
-                st.subheader("Jerarquía de Objetivos")
+                st.subheader("🌳 Jerarquía de Objetivos")
                 
                 # Create sunburst chart
                 hierarchy = create_okr_hierarchy(okrs)
@@ -452,104 +355,124 @@ if check_password():
                     values=values,
                     branchvalues="total"
                 ))
-                fig_sunburst.update_layout(height=700)  # Más alto para ser más visible
+                fig_sunburst.update_layout(height=600)
                 st.plotly_chart(fig_sunburst, use_container_width=True)
+            
+            with tab3:
+                st.subheader("🗺️ Mapa Estratégico de Causa-Efecto")
                 
-                st.info(f"{get_icon('info', 'small')} **Interacción**: Click en los segmentos para explorar la jerarquía de objetivos "
-                       "desde perspectivas estratégicas hasta Key Results individuales.", unsafe_allow_html=True)
+                # Create Sankey diagram
+                strategy_data = create_strategy_map_data(okrs)
+                
+                fig_sankey = go.Figure(data=[go.Sankey(
+                    node=dict(
+                        pad=15,
+                        thickness=20,
+                        line=dict(color="black", width=0.5),
+                        label=strategy_data['nodes'],
+                        color=strategy_data['node_colors']
+                    ),
+                    link=dict(
+                        source=strategy_data['links']['source'],
+                        target=strategy_data['links']['target'],
+                        value=strategy_data['links']['value']
+                    )
+                )])
+                
+                fig_sankey.update_layout(
+                    title_text="Flujo de Causalidad Entre Perspectivas",
+                    font_size=12,
+                    height=400
+                )
+                st.plotly_chart(fig_sankey, use_container_width=True)
+                
+                st.info("💡 **Lectura del Mapa**: Las inversiones en Learning & Growth fortalecen "
+                       "los Procesos Internos, lo que mejora la satisfacción del Cliente y "
+                       "finalmente impulsa resultados Financieros.")
         
         # ========================================================================
         # SECTION 3: RAYLEIGH DEFECT PREDICTION
         # ========================================================================
-        elif "Predicción" in section:
+        elif section == "🔮 Predicción de Defectos (Rayleigh)":
             # RBAC Check
             if st.session_state.get("username") not in ["admin", "pm"]:
-                st.markdown(f"## {get_icon('error', 'large')} Acceso Denegado", unsafe_allow_html=True)
-                st.warning(f"{get_icon('warning', 'small')} Esta funcionalidad es exclusiva para Administradores y Responsables de Proyecto (PM).", unsafe_allow_html=True)
+                st.error("⛔ **Acceso Denegado**")
+                st.warning("Esta funcionalidad es exclusiva para Administradores y Responsables de Proyecto (PM).")
                 st.stop()
             
-            st.markdown(f"## {get_icon('predictions', 'large')} Modelo Predictivo de Defectos (Rayleigh)", unsafe_allow_html=True)
-            st.markdown("Estimación probabilística de defectos para proyectos nuevos")
+            st.header("🔮 Modelo Predictivo de Defectos (Rayleigh)")
+            st.markdown("Estimación probabilística de defectos para proyectos nuevos basada en distribución Rayleigh")
             
             # Calibration info
-            sigmas = calibrate_rayleigh_sigma(df_cal_f, df_proy_f)
-            confidence = calculate_model_confidence(df_cal_f, df_proy_f)
+            sigmas = calibrate_rayleigh_sigma(df_cal, df_proy)
+            confidence = calculate_model_confidence(df_cal, df_proy)
             
             col_info1, col_info2 = st.columns(2)
             with col_info1:
-                st.info(f"{get_icon('info', 'small')} **Datos Históricos**: {confidence['num_projects']} proyectos, "
-                       f"{confidence['num_quality_records']} registros de calidad", unsafe_allow_html=True)
+                st.info(f"📊 **Datos Históricos**: {confidence['num_projects']} proyectos, "
+                       f"{confidence['num_quality_records']} registros de calidad")
             with col_info2:
-                st.success(f"{get_icon('success', 'small')} **Confianza**: {confidence['label']} ({confidence['score']*100:.0f}%)", unsafe_allow_html=True)
+                st.success(f"🎯 **Confianza del Modelo**: {confidence['label']} ({confidence['score']*100:.0f}%)")
             
             st.markdown("---")
             
             # Input Form
-            st.subheader("⚙️ Parámetros del Proyecto")
+            st.subheader("📝 Parámetros del Nuevo Proyecto")
             
             col_input1, col_input2 = st.columns(2)
             
             with col_input1:
-                # CAMBIO: Eliminar LOC, usar Story Points
                 project_size = st.slider(
-                    f"{get_icon('insights', 'small')} Tamaño (Story Points)",
-                    min_value=10,
-                    max_value=1000,
-                    value=100,
-                    step=10,
-                    help="Tamaño estimado en Story Points",
-                    unsafe_allow_html=True
+                    "Tamaño del Proyecto (LOC - Líneas de Código)",
+                    min_value=1000,
+                    max_value=500000,
+                    value=50000,
+                    step=5000,
+                    help="Tamaño estimado en líneas de código"
                 )
                 
                 duration_months = st.slider(
-                    f"{get_icon('time', 'small')} Duración (meses)",
+                    "Duración del Proyecto (meses)",
                     min_value=1,
                     max_value=24,
                     value=6,
-                    step=1,
-                    unsafe_allow_html=True
+                    step=1
                 )
                 
                 team_size = st.slider(
-                    f"{get_icon('team', 'small')} Tamaño del Equipo",
+                    "Tamaño del Equipo",
                     min_value=1,
                     max_value=30,
                     value=8,
                     step=1,
-                    help="Número de desarrolladores",
-                    unsafe_allow_html=True
+                    help="Número de desarrolladores"
                 )
             
             with col_input2:
                 experience_level = st.select_slider(
-                    f"{get_icon('learning', 'small')} Experiencia del Equipo",
+                    "Nivel de Experiencia del Equipo",
                     options=["Junior", "Mid", "Senior"],
-                    value="Mid",
-                    unsafe_allow_html=True
+                    value="Mid"
                 )
                 
                 tech_complexity = st.select_slider(
-                    f"{get_icon('processes', 'small')} Complejidad Tecnológica",
+                    "Complejidad Tecnológica",
                     options=["Baja", "Media", "Alta", "Muy Alta"],
-                    value="Media",
-                    unsafe_allow_html=True
+                    value="Media"
                 )
                 
-                predict_button = st.button("Generar Predicción", type="primary")
+                predict_button = st.button("🔮 Generar Predicción", type="primary")
             
             if predict_button:
-                # Convertir Story Points a LOC equivalente (estimación: 1 SP ≈ 50 LOC)
-                estimated_loc = project_size * 50
-                
                 # Validate inputs
-                is_valid, error_msg = validate_prediction_inputs(estimated_loc, duration_months, team_size)
+                is_valid, error_msg = validate_prediction_inputs(project_size, duration_months, team_size)
                 
                 if not is_valid:
-                    st.error(f"{get_icon('error', 'small')} {error_msg}", unsafe_allow_html=True)
+                    st.error(f"❌ {error_msg}")
                 else:
                     # Generate prediction
                     prediction = predict_defects_rayleigh(
-                        project_size=estimated_loc,
+                        project_size=project_size,
                         duration_months=duration_months,
                         team_size=team_size,
                         experience_level=experience_level,
@@ -578,29 +501,31 @@ if check_password():
                     
                     with col_res1:
                         st.metric(
-                            "Defectos Totales",
+                            "Defectos Totales Estimados",
                             f"{prediction['total_defects']:.0f}",
-                            help="Total esperado durante el proyecto"
+                            help="Total de defectos esperados durante todo el proyecto"
                         )
                     
                     with col_res2:
                         st.metric(
-                            "Pico de Defectos",
+                            "Día del Pico de Defectos",
                             f"Día {prediction['peak_day']:.0f}",
                             delta=f"{(prediction['peak_day']/prediction['duration_days']*100):.0f}% del proyecto"
                         )
                     
                     with col_res3:
                         st.metric(
-                            "Recursos QA",
-                            f"{qa_rec['qa_engineers']} ing.",
+                            "Recursos QA Requeridos",
+                            f"{qa_rec['qa_engineers']} ingeniero(s)",
                             help="Ingenieros de QA recomendados"
                         )
                     
                     with col_res4:
-                        risk_icons = {"green": "success", "yellow": "warning", "red": "error"}
-                        risk_icon = get_icon(risk_icons.get(qa_rec['risk_color'], 'info'), 'small')
-                        st.markdown(f"**Riesgo**: {risk_icon} {qa_rec['risk_level']}", unsafe_allow_html=True)
+                        risk_color_emoji = {"green": "🟢", "yellow": "🟡", "red": "🔴"}
+                        st.metric(
+                            "Nivel de Riesgo",
+                            f"{risk_color_emoji.get(qa_rec['risk_color'], '⚪')} {qa_rec['risk_level']}"
+                        )
                     
                     st.markdown("---")
                     
@@ -608,10 +533,11 @@ if check_password():
                     col_chart1, col_chart2 = st.columns([2, 1])
                     
                     with col_chart1:
-                        st.subheader("📈 Curva de Descubrimiento")
+                        st.subheader("📈 Curva de Descubrimiento de Defectos (Rayleigh)")
                         
                         fig_rayleigh = go.Figure()
                         
+                        # Main curve
                         fig_rayleigh.add_trace(go.Scatter(
                             x=curve['time'],
                             y=curve['defects_per_day'],
@@ -621,11 +547,12 @@ if check_password():
                             fill='tozeroy'
                         ))
                         
+                        # Confidence bands
                         fig_rayleigh.add_trace(go.Scatter(
                             x=curve['time'],
                             y=curve['upper_bound'],
                             mode='lines',
-                            name=f'Superior ({curve["confidence_level"]*100:.0f}%)',
+                            name=f'Límite Superior ({curve["confidence_level"]*100:.0f}%)',
                             line=dict(color='lightblue', width=1, dash='dash')
                         ))
                         
@@ -633,12 +560,13 @@ if check_password():
                             x=curve['time'],
                             y=curve['lower_bound'],
                             mode='lines',
-                            name=f'Inferior ({curve["confidence_level"]*100:.0f}%)',
+                            name=f'Límite Inferior ({curve["confidence_level"]*100:.0f}%)',
                             line=dict(color='lightblue', width=1, dash='dash'),
                             fill='tonexty',
                             fillcolor='rgba(173, 216, 230, 0.2)'
                         ))
                         
+                        # Peak annotation
                         fig_rayleigh.add_vline(
                             x=curve['peak_day'],
                             line_dash="dash",
@@ -648,15 +576,15 @@ if check_password():
                         
                         fig_rayleigh.update_layout(
                             xaxis_title="Días del Proyecto",
-                            yaxis_title="Defectos por Día",
-                            height=450,
+                            yaxis_title="Defectos Descubiertos por Día",
+                            height=400,
                             hovermode='x unified'
                         )
                         
                         st.plotly_chart(fig_rayleigh, use_container_width=True)
                     
                     with col_chart2:
-                        st.subheader("🐛 Por Severidad")
+                        st.subheader("🎯 Defectos por Severidad")
                         
                         sev_df = pd.DataFrame(list(prediction['severity_distribution'].items()),
                                              columns=['Severidad', 'Defectos'])
@@ -665,37 +593,41 @@ if check_password():
                             sev_df,
                             values='Defectos',
                             names='Severidad',
-                            title="Distribución",
+                            title="Distribución Estimada",
                             color_discrete_sequence=px.colors.sequential.RdYlGn_r
                         )
-                        fig_sev.update_layout(height=450)
+                        fig_sev.update_layout(height=400)
                         st.plotly_chart(fig_sev, use_container_width=True)
                     
                     # Summary table
                     st.markdown("---")
-                    st.subheader("ℹ️ Resumen")
+                    st.subheader("📋 Resumen y Recomendaciones")
                     
                     summary_df = pd.DataFrame({
                         'Métrica': [
                             'Defectos Totales',
-                            'Pico (Día)',
+                            'Pico de Defectos (Día)',
                             'Defectos en Pico',
-                            'QA Requerido',
-                            'Horas QA',
+                            'Personal QA Requerido',
+                            'Horas de QA Totales',
                             'Nivel de Riesgo'
                         ],
                         'Valor': [
                             f"{prediction['total_defects']:.0f} defectos",
                             f"Día {prediction['peak_day']:.0f}",
-                            f"{curve['peak_value']:.2f} def/día",
-                            f"{qa_rec['qa_engineers']} ing.",
-                            f"{qa_rec['qa_hours_total']:.0f} hrs",
+                            f"{curve['peak_value']:.2f} defectos/día",
+                            f"{qa_rec['qa_engineers']} ingeniero(s)",
+                            f"{qa_rec['qa_hours_total']:.0f} horas",
                             f"{qa_rec['risk_level']}"
                         ]
                     })
                     
                     st.dataframe(summary_df, use_container_width=True, hide_index=True)
                     
-                    st.success(f"{get_icon('success', 'small')} **Recomendación**: {qa_rec['recommendation']}", unsafe_allow_html=True)
+                    st.success(f"✅ **Recomendación**: {qa_rec['recommendation']}")
                     
-                    st.info(f"{get_icon('info', 'small')} **Nota**: Basado en {project_size} Story Points (~{estimated_loc:,} LOC estimados)", unsafe_allow_html=True)
+                    st.info("💡 **Interpretación**: El modelo Rayleigh predice que los defectos "
+                           "seguirán un patrón donde la tasa de descubrimiento aumentará hasta el "
+                           f"día {prediction['peak_day']:.0f} (aproximadamente {(prediction['peak_day']/prediction['duration_days']*100):.0f}% "
+                           "del proyecto) y luego disminuirá gradualmente. Planifica recursos de QA "
+                           "intensivos durante este período crítico.")
