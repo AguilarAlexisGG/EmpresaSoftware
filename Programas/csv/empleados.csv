@@ -1,0 +1,121 @@
+id_empleado,nombre_completo,rol,salario_hora,disponibilidad,fecha_contratacion,estado_laboral,habilidades
+1,Indira Fidel Cabán,Data Scientist,102.1,1,2021-03-07,activo,Cuidador de animales
+2,Pablo Isabela Abrego,Dev Frontend,111.49,0,2015-10-26,inactivo,Cajero de banco
+3,Mauricio Soria,Dev Backend,43.0,1,2021-05-02,activo,Instructor de autoescuela
+4,César Abigail Alba Moya,Dev Frontend,115.26,1,2018-11-07,activo,Mecánico y ajustador electricista
+5,Marisol Inés Apodaca Solano,Dev Backend,111.01,0,2014-11-17,inactivo,Empleado de agencia de viajes
+6,Irma Elias Vaca,Project Manager,66.27,1,2016-07-09,activo,Operador de máquinas de movimiento de tierras
+7,Reina Zúñiga Solorzano,Data Scientist,65.85,0,2016-03-07,inactivo,Analista de sistemas
+8,Lorena Grijalva Pineda,Dev Backend,81.7,1,2015-01-05,activo,Secretario médicos
+9,Sr(a). Graciela Anguiano,Data Scientist,74.74,1,2025-11-13,activo,Diseñador multimedia
+10,Aurelio Wilfrido Llamas Echeverría,Dev Backend,56.78,1,2021-01-30,activo,Gestor de aduana
+11,Dulce Perla Carreón Zamora,Dev Backend,43.57,1,2020-04-19,activo,Geólogo
+12,Clemente Florencia Terán Barajas,Data Scientist,91.76,1,2023-08-21,activo,Practicante y asistente médico
+13,Paulina Rubén Aguayo,Dev Frontend,116.89,1,2025-04-18,activo,Clasificador de desechos
+14,Ing. José Eduardo Camacho,Dev Frontend,80.14,1,2013-11-28,activo,Mampostero
+15,Mtro. Luis Manuel Preciado,Data Scientist,100.94,0,2016-03-09,inactivo,"Redactor de carteles, pintor decorativos y grabador"
+16,Pascual Humberto Terrazas Hernández,Data Scientist,112.68,1,2024-04-17,activo,Herramentista
+17,Ing. Mariano Pedroza,Data Scientist,51.65,1,2020-02-17,activo,Técnico en documentación sanitaria
+18,Lic. René Chavarría,Dev Frontend,67.79,1,2019-11-17,activo,Regulador y operador de máquinas y herramientas
+19,Amalia Clemente Ordóñez,Project Manager,109.07,1,2024-02-07,activo,Cuidador de niños
+20,Rolando Rodríguez,Dev Frontend,102.43,0,2017-03-12,inactivo,Ingeniero civil
+21,Israel Madera,DevOps,108.17,1,2019-10-11,activo,Parquetero y colocador de suelos
+22,Berta Rodolfo Fajardo,Project Manager,96.5,1,2025-04-15,activo,Controlador de instalaciones de procesamiento de productos químicos
+23,Josefina Estefanía Lara,Project Manager,43.61,1,2017-03-31,activo,Ingeniero en telecomunicaciones
+24,Luis Manuel Octavio Alvarado Aponte,QA Engineer,112.17,0,2014-02-26,inactivo,"Limpiador y asistente de oficinas, hoteles y otros establecimientos"
+25,Ing. Irene Armas,Dev Backend,98.99,1,2018-02-14,activo,Peón de explotaciones agrícolas
+26,Genaro Cecilia Muñiz,QA Engineer,47.99,1,2014-04-25,activo,Agrimensor
+27,Germán López Zambrano,Project Manager,87.47,1,2014-07-16,activo,Pescador de agua dulce y en aguas costeras
+28,Violeta Malave,QA Engineer,76.9,1,2024-01-30,activo,Compositor
+29,Dr. Ramiro Jaramillo,Dev Backend,39.23,1,2020-06-13,activo,Peletero
+30,Cristian Armando Parra Torres,DevOps,111.21,0,2014-08-28,inactivo,Supervisor en ingeniería de minas
+31,Ing. Alvaro Luna,Data Scientist,105.53,1,2020-08-08,activo,Vendedor ambulantes (excluyendo de comida)
+32,Abril Vigil,Project Manager,116.07,1,2014-10-01,activo,Director de industrias manufactureras
+33,Elvira Arce,Project Manager,93.83,1,2022-11-01,activo,Vendedor puerta a puerta
+34,Federico Manzanares,QA Engineer,116.33,1,2023-11-30,activo,Trabajador de cuidados personales a domicilio
+35,Micaela Solorio Mesa,DevOps,98.72,0,2019-04-05,inactivo,Químico
+36,Bianca Gustavo Ozuna Aguilar,Dev Frontend,90.25,1,2015-11-10,activo,Asistente veterinario
+37,Genaro Israel Ramos Samaniego,Data Scientist,51.2,1,2017-02-12,activo,Técnico en optometría y ópticos
+38,Yuridia Martínez Cadena,Data Scientist,49.64,1,2024-08-15,activo,"Supervisor de mantenimiento y limpieza en oficinas, hoteles y otros establecimientos"
+39,Evelio Cabrera,Dev Backend,119.81,1,2021-01-16,activo,Profesional de la protección medioambiental
+40,Lic. Emilio Covarrubias,Dev Backend,31.55,0,2014-09-02,inactivo,Director financiero
+41,Lic. Eva Jimínez,Data Scientist,107.13,1,2018-04-12,activo,Administrador de bases de datos
+42,Fernando Calvillo,Data Scientist,113.53,1,2020-01-24,activo,Analista financiero
+43,Laura Madrid,Dev Backend,54.41,1,2020-07-29,activo,Lavandero
+44,Hernán Escobedo Montoya,Data Scientist,95.43,1,2014-01-27,activo,"Panaderos, pasteleros y confiteros"
+45,Jaime Limón,QA Engineer,82.8,1,2016-06-17,activo,Patronista y cortador de tela
+46,Sr(a). Enrique Mendoza,Data Scientist,84.18,1,2020-12-18,activo,Ingeniero civil
+47,Felix Barbara Franco,Dev Frontend,109.19,0,2017-06-03,inactivo,Estadístico
+48,Ing. Armando Caraballo,Data Scientist,111.59,1,2022-09-22,activo,Conductor de vehículos y máquinas de tracción animal
+49,Adalberto Girón,Project Manager,106.54,0,2017-10-28,inactivo,Cazador
+50,Lic. Bianca de la Garza,Data Scientist,39.6,0,2017-04-23,inactivo,Director de servicios de cuidado de las personas de edad
+51,Rocío Henríquez,QA Engineer,74.1,1,2025-10-26,activo,Director de servicios de bienestar social
+52,Enrique Rosa Quintanilla,Project Manager,117.54,1,2025-02-07,activo,Ingeniero metalúrgico
+53,Alonso Paulina Pineda,DevOps,51.19,1,2020-03-09,activo,Archivista
+54,Mtro. Margarita Meléndez,DevOps,63.26,1,2022-07-24,activo,Ayudante de odontología
+55,Josefina Carolina Lomeli,Project Manager,118.64,1,2023-04-28,activo,Técnico forestal
+56,Bianca Ramón Martínez Navarro,Project Manager,42.19,0,2018-10-15,inactivo,Supervisor de la construcción
+57,Diana Arroyo Durán,Data Scientist,110.86,1,2021-03-05,activo,Artesano
+58,Carolina Jaime Villa,DevOps,54.6,1,2023-09-15,activo,Trabajador de explotaciones de acuicultura
+59,María Luisa Clemente Blanco Villanueva,Project Manager,110.73,1,2017-08-01,activo,Mecánico y reparador en electrónica
+60,Rufino Ruelas,Dev Backend,70.62,1,2023-01-22,activo,Empleado de biblioteca
+61,Ing. Paola Rolón,Data Scientist,60.72,1,2020-04-25,activo,Administrador de bases de datos
+62,Abelardo Rocha,Project Manager,38.03,1,2016-05-18,activo,Chef
+63,Nancy Vera,Dev Frontend,115.4,1,2014-05-23,activo,Peón de explotaciones agrícolas
+64,Clemente Terrazas,Dev Backend,46.44,1,2022-06-15,activo,Secretario administrativo
+65,Jaime Solano Laboy,Dev Backend,85.02,1,2023-05-26,activo,Guardafrenos
+66,Judith Enríquez Canales,DevOps,78.39,1,2021-04-14,activo,Gorjadore
+67,Mauro Guajardo Zúñiga,QA Engineer,30.39,1,2023-08-19,activo,Conductor de automóviles
+68,Conchita Chacón Sisneros,DevOps,86.46,1,2025-07-25,activo,Parquetero y colocador de suelos
+69,Sessa Orosco,Dev Backend,104.21,1,2021-10-08,activo,Representante comercial
+70,Bruno Gallardo,Dev Backend,109.66,1,2017-08-24,activo,Operador de maquinaria agrícola y forestal móvil
+71,Olga Georgina Villegas Tejada,Project Manager,106.37,1,2024-03-21,activo,Fotógrafo
+72,Ignacio Jaime Juárez,QA Engineer,102.74,1,2024-03-13,activo,Operador de máquinas lavarropas
+73,Pedro Zeferino Alcala Cervantes,QA Engineer,91.83,1,2025-06-28,activo,Ingeniero medioambiental
+74,Lic. Israel Manzanares,Dev Frontend,58.95,0,2019-12-05,inactivo,Capitán decubierta
+75,Aldo Elena Pabón,Dev Backend,44.87,1,2023-01-19,activo,Peón de explotaciones agrícolas
+76,Natividad Nancy Elizondo,Dev Frontend,74.65,1,2021-02-10,activo,Trabajador agropecuario de subsistencia
+77,Ing. Helena Almanza,Dev Backend,101.97,0,2019-07-11,inactivo,Limpiador y asistente doméstico
+78,Graciela Mesa Farías,DevOps,76.7,1,2020-10-12,activo,Ingeniero mecánico
+79,Raquel Catalina Prado Chapa,Project Manager,30.61,1,2018-08-11,activo,Zapatero
+80,María Olivares,Dev Backend,30.79,1,2023-09-22,activo,Calderero
+81,Antonio Yeni Esparza,DevOps,36.99,1,2016-07-01,activo,Profesional de la salud y la higiene laboral y ambiental
+82,Hilda Amalia Campos Marín,DevOps,71.34,1,2022-12-31,activo,Agente de empleo
+83,Aldonza Linares,Dev Backend,87.67,1,2024-09-15,activo,Médico especialista
+84,Sr(a). Mayte Cortés,Project Manager,47.82,1,2021-01-25,activo,Ayudante de cocina
+85,Dr. Beatriz Valladares,Dev Backend,40.8,1,2020-02-16,activo,Botánico
+86,Ángela Montes,Dev Backend,80.62,1,2022-01-03,activo,Operador de instalaciones mineras
+87,Abigail Moya,QA Engineer,49.51,1,2017-09-19,activo,Limpiador y asistente doméstico
+88,Gloria Solís Dueñas,Data Scientist,108.0,1,2017-06-14,activo,Comerciante de tiendas
+89,Sr(a). Alvaro Mireles,Dev Frontend,61.01,1,2018-10-24,activo,Adivinador
+90,Alfredo Zapata Perea,Data Scientist,61.09,1,2023-12-02,activo,Cajero de banco
+91,Guillermo Lovato,Project Manager,70.34,1,2025-05-02,activo,"Redactor de carteles, pintor decorativos y grabador"
+92,Eugenia Benjamín Gaytán,DevOps,66.39,0,2014-10-05,inactivo,Agrónomo
+93,Ernesto Alberto Santillán,QA Engineer,87.58,1,2024-10-23,activo,Comerciante de tiendas
+94,Susana Montoya,Data Scientist,33.08,1,2021-08-03,activo,Profesional de medicina alternativa
+95,Ernesto Emilio Hernandes Meza,DevOps,49.39,0,2015-12-16,inactivo,Diseñador gráfico
+96,Itzel Diana Guzmán Guerra,Dev Backend,59.09,1,2025-10-11,activo,Profesional de nivel medio de enfermería
+97,Jaime Nadia Alfaro Olivárez,Project Manager,72.08,1,2022-03-30,activo,Tronzador
+98,Omar Emiliano Garrido Moya,Dev Frontend,44.17,0,2019-07-23,inactivo,Asesor financiero y en inversiones
+99,Perla Montes Godoy,Project Manager,48.51,1,2025-08-27,activo,Profesor de música
+100,Armando Ramón,QA Engineer,65.04,1,2022-11-29,activo,Orfebre
+101,Dr. Rubén Sanches,DevOps,95.86,1,2019-09-13,activo,Veterinario
+102,Guillermina David Muñiz,Data Scientist,52.57,1,2017-04-20,activo,Oficial de las fuerzas armadas
+103,Salvador Pulido,Dev Backend,98.37,0,2015-08-13,inactivo,Calderero
+104,Marcos Camila Varela Ureña,DevOps,89.38,1,2023-08-17,activo,Ayudante de cocina
+105,Ing. María Elena Corona,Data Scientist,117.86,1,2023-12-15,activo,Practicante paramédico
+106,Pilar Abel Tijerina Roldán,QA Engineer,51.96,1,2023-10-07,activo,Dinamitero
+107,Sr(a). Ariadna Guajardo,Data Scientist,119.33,1,2015-01-15,activo,Economista
+108,Adán Mercedes Medina Zambrano,DevOps,109.93,1,2024-06-16,activo,Trabajador de cuidados personales a domicilio
+109,Mateo Natividad Cotto,Dev Backend,98.26,1,2016-09-30,activo,Veterinario
+110,María José Barrios Paredes,Project Manager,41.66,1,2021-01-29,activo,Asistente farmacéutico
+111,Norma Helena Zayas,Dev Frontend,35.1,0,2015-09-25,inactivo,Profesional religioso
+112,Blanca Marisol Ocampo,QA Engineer,64.98,1,2014-10-21,activo,Asistente fisioterapeuta
+113,Dalia Julio César Vera,Dev Backend,57.82,0,2014-10-16,inactivo,Profesor de formación profesional
+114,Julio César José Eduardo Zambrano Hernádez,Dev Backend,118.11,1,2022-03-25,activo,Profesional de nivel medio de servicios estadísticos o matemáticos
+115,Andrés Guardado,QA Engineer,76.61,1,2016-12-04,activo,Audiólogo
+116,Violeta Gastélum,QA Engineer,83.21,1,2020-04-10,activo,Empleado del servicio de personal
+117,Renato Paola Valdez,Dev Frontend,112.19,0,2014-05-12,inactivo,Mecánico-montador de instalaciones de refrigeración y climatización
+118,Julio César Nadia Jurado Gurule,Data Scientist,118.48,1,2018-06-15,activo,Operador de maquinaria agrícola y forestal móvil
+119,Ing. Gerónimo Sánchez,Project Manager,46.54,1,2022-04-07,activo,Empleado de biblioteca
+120,Claudia Cano Vega,QA Engineer,45.46,1,2021-07-16,activo,Ingeniero electrónico

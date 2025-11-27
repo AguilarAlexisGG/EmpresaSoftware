@@ -1,0 +1,21 @@
+id_cliente,nombre_cliente,id_industria,id_pais,id_satisfaccion
+1,"Rosales, Ponce y Barrientos",1,1,2
+2,"Luevano, Villagómez y Ocasio",2,2,3
+3,Despacho Soto-Macías,3,3,3
+4,"Zelaya, Razo y Gamez",4,4,4
+5,Club Leiva-Godoy,5,3,5
+6,Corporacin Gamez y Lucero,6,5,4
+7,Villegas-Nava y Asociados,7,5,5
+8,Grupo Villagómez y Gastélum,8,6,2
+9,Páez-Garrido y Asociados,9,7,5
+10,Industrias Soto-Moreno,10,4,3
+11,Corona-Arce,11,8,2
+12,Gastélum-Puga S.C.,12,6,2
+13,"Despacho Aguayo, Dueñas y Rentería",13,9,5
+14,Despacho Rocha-Beltrán,14,10,2
+15,Marroquín S.A. de C.V.,15,9,5
+16,Heredia y Montero S. R.L. de C.V.,16,7,2
+17,"Soria, Armas y Esparza",17,10,5
+18,Despacho Sotelo-Rivera,18,10,2
+19,Despacho Nazario-Posada,19,8,2
+20,Villalpando A.C.,20,6,5
