@@ -102,29 +102,6 @@ if check_password():
         
         st.sidebar.markdown("---")
         
-        st.sidebar.markdown("---")
-        
-        # FILTROS GLOBALES
-        st.sidebar.markdown(f"## {get_icon('filter', 'medium')} Filtros", unsafe_allow_html=True)
-        
-        # Filtro por cliente
-        clientes = ["Todos"] + sorted(df_proy['nombre_cliente'].unique().tolist())
-        cliente_sel = st.sidebar.selectbox(
-            "🏢 Cliente",
-            clientes
-        )
-        
-        # Filtro por país
-        paises = ["Todos"] + sorted(df_proy['nombre_pais'].unique().tolist())
-        pais_sel = st.sidebar.selectbox(
-            "🌍 País",
-            paises
-        )
-        
-        # Aplicar filtros
-        df_proy_f = df_proy.copy()
-        df_cal_f = df_cal.copy()
-        
         if cliente_sel != "Todos":
             df_proy_f = df_proy_f[df_proy_f['nombre_cliente'] == cliente_sel]
             # Filtrar calidad por proyectos del cliente
@@ -425,7 +402,7 @@ if check_password():
                             st.plotly_chart(fig, use_container_width=True)
             
             with tab2:
-                st.subheader("Jerarquía de Objetivos")
+                st.subheader(f"{get_icon('insights', 'medium')} Jerarquía de Objetivos", unsafe_allow_html=True)
                 
                 # Create sunburst chart
                 hierarchy = create_okr_hierarchy(okrs)
@@ -485,7 +462,7 @@ if check_password():
             st.markdown("---")
             
             # Input Form
-            st.subheader("⚙️ Parámetros del Proyecto")
+            st.subheader(f"{get_icon('filter', 'medium')} Parámetros del Proyecto", unsafe_allow_html=True)
             
             col_input1, col_input2 = st.columns(2)
             
@@ -571,7 +548,7 @@ if check_password():
                     )
                     
                     st.markdown("---")
-                    st.subheader("📊 Resultados de la Predicción")
+                    st.subheader(f"{get_icon('insights', 'medium')} Resultados de la Predicción", unsafe_allow_html=True)
                     
                     # Summary metrics
                     col_res1, col_res2, col_res3, col_res4 = st.columns(4)
@@ -608,7 +585,7 @@ if check_password():
                     col_chart1, col_chart2 = st.columns([2, 1])
                     
                     with col_chart1:
-                        st.subheader("📈 Curva de Descubrimiento")
+                        st.subheader(f"{get_icon('trending_up', 'medium')} Curva de Descubrimiento", unsafe_allow_html=True)
                         
                         fig_rayleigh = go.Figure()
                         
@@ -656,7 +633,7 @@ if check_password():
                         st.plotly_chart(fig_rayleigh, use_container_width=True)
                     
                     with col_chart2:
-                        st.subheader("🐛 Por Severidad")
+                        st.subheader(f"{get_icon('bugs', 'medium')} Por Severidad", unsafe_allow_html=True)
                         
                         sev_df = pd.DataFrame(list(prediction['severity_distribution'].items()),
                                              columns=['Severidad', 'Defectos'])
@@ -673,7 +650,7 @@ if check_password():
                     
                     # Summary table
                     st.markdown("---")
-                    st.subheader("ℹ️ Resumen")
+                    st.subheader(f"{get_icon('info', 'medium')} Resumen", unsafe_allow_html=True)
                     
                     summary_df = pd.DataFrame({
                         'Métrica': [
