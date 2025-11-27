@@ -4,15 +4,22 @@ Este proyecto implementa un Sistema de Soporte a Decisiones (DSS) para una empre
 
 ## 📋 Características Principales
 
-### 1. Dashboard Estratégico (Balanced Scorecard)
-- **Perspectiva Financiera**: Monitoreo de Ganancia Neta, Margen de Beneficio y Costos.
-- **Perspectiva del Cliente**: Análisis de rentabilidad por cliente y geolocalización.
-- **Perspectiva de Procesos**: Seguimiento de defectos y métricas de calidad.
+### 1. KPIs Dashboard - Indicadores Operacionales
+- **6 Métricas Clave**: Tasa de Completación, Eficiencia Presupuestaria, Utilización de Equipo, Densidad de Defectos, Tiempo de Resolución e Índice de Satisfacción.
+- **Visualizaciones Interactivas**: Gauge charts, pie charts y métricas con drill-down por severidad.
+- **Actualización en Tiempo Real**: Botón de refrescar datos desde OLAP cubes.
 
-### 2. Modelo Predictivo (Montecarlo + Rayleigh)
-- **Simulación Estocástica**: Proyección de defectos futuros basada en datos históricos.
-- **Curva de Rayleigh**: Estimación de la distribución temporal de hallazgos de defectos.
-- **Herramienta de Planificación**: Permite a los Project Managers estimar recursos de QA necesarios.
+### 2. OKRs & Balanced Scorecard
+- **4 Perspectivas Estratégicas**: Financial, Customer, Internal Processes, Learning & Growth.
+- **Gráficas de Progreso Temporal**: Visualización de avance de OKRs en los últimos 6 meses.
+- **Jerarquía Interactiva**: Sunburst chart que muestra objetivos, Key Results y su interrelación.
+- **Automático desde Datos**: OKRs generados dinámicamente desde métricas de proyectos.
+
+### 3. Modelo Predictivo de Defectos (Rayleigh)
+- **Input en Story Points**: Estimación ágil (1 SP ≈ 50 LOC) para proyectos nuevos.
+- **Curva de Rayleigh**: Distribución temporal de defectos con intervalos de confianza 95%.
+- **Recomendaciones QA**: Cálculo automático de recursos de Quality Assurance necesarios.
+- **Análisis de Riesgo**: Clasificación de proyectos según densidad de defectos esperada.
 
 ### 3. Arquitectura de Datos
 - **ETL Automatizado**: Scripts en Python para la generación y transformación de datos.
@@ -64,19 +71,44 @@ El sistema cuenta con un control de acceso basado en roles (RBAC).
 
 ```text
 EmpresaSoftware/
-├── app.py                  # Aplicación principal (Streamlit)
-├── etl/                    # Scripts de procesamiento de datos
-│   ├── ETL.py              # Lógica de transformación y carga
-│   └── datosSinteticos.py  # Generador de datos de prueba
-├── OLAP_Proyectos.csv      # Datos procesados de proyectos
-├── OLAP_Calidad.csv        # Datos procesados de calidad
-├── requirements.txt        # Dependencias del proyecto
-├── DOCUMENTACION.md        # Documentación técnica detallada
-└── reporte_proyecto.tex    # Reporte académico en LaTeX
+├── app.py                    # Aplicación principal (Streamlit)
+├── olap_functions.py         # Operaciones OLAP (slice, dice, drill-down, roll-up)
+├── kpi_calculator.py         # Cálculo de 6 KPIs operacionales
+├── balanced_scorecard.py     # Generación de OKRs y Balanced Scorecard
+├── rayleigh_model.py         # Modelo predictivo de defectos (Rayleigh)
+├── etl/                      # Scripts de procesamiento de datos
+│   ├── ETL.py                # Lógica de transformación y carga
+│   └── datosSinteticos.py    # Generador de datos de prueba
+├── OLAP_Proyectos.csv        # Cubo OLAP de proyectos
+├── OLAP_Calidad.csv          # Cubo OLAP de calidad y defectos
+├── requirements.txt          # Dependencias del proyecto
+├── README.md                 # Este archivo
+└── DOCUMENTACION.md          # Documentación técnica detallada
 ```
 
 ## 🛠️ Tecnologías Utilizadas
 - **Python**: Lenguaje principal.
 - **Streamlit**: Framework para la interfaz de usuario.
 - **Pandas/NumPy**: Procesamiento y análisis de datos.
-- **Plotly**: Visualizaciones interactivas.
+- **Plotly**: Visualizaciones interactivas (gauges, sunburst, line charts).
+- **SciPy**: Distribuciones estadísticas para modelo Rayleigh.
+
+## 📊 Funcionalidades por Sección
+
+### KPIs Dashboard
+- Tasa de Completación con gauge chart
+- Eficiencia Presupuestaria (ROI)
+- Utilización de Equipo
+- Densidad de Defectos con pie chart de severidad
+- Tiempo Promedio de Resolución
+- Índice de Satisfacción del Cliente
+
+### OKRs & Balanced Scorecard
+- Vista general con 4 perspectivas y progress bars
+- Gráficas de líneas temporales (progreso últimos 6 meses)
+- Sunburst chart de jerarquía de objetivos (3 niveles)
+
+### Predicción Rayleigh  
+- Input: Story Points, Duración, Tamaño Equipo, Experiencia, Complejidad
+- Output: Curva de defectos, Pico de defectos, Recursos QA, Nivel de riesgo
+- Restricción RBAC: Solo admin y pm
