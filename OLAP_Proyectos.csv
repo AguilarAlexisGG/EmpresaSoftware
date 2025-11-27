@@ -1,0 +1,470 @@
+id_hecho,nombre_proyecto,nombre_cliente,nombre_pais,año,nombre_mes,dia,ganancia_neta,costo_total_real
+1,Proy-2023-optimiza,Industrias Soto-Moreno,Malasia,2024,Diciembre,8,312159.69,910056
+2,Proy-2016-itera,"Rosales, Ponce y Barrientos",Uruguay,2016,Junio,6,34801.62,98280
+3,Proy-2020-visualiza,Grupo Villagómez y Gastélum,Islas Marshall,2021,Septiembre,5,164353.38,799050
+4,Proy-2024-orquesta,Despacho Nazario-Posada,India,2024,Noviembre,25,0.0,0
+5,Proy-2019-genera,"Soria, Armas y Esparza",Lituania,2020,Abril,5,110892.43,246000
+6,Proy-2024-sintetiza,Despacho Sotelo-Rivera,Lituania,2025,Mayo,16,325433.36,753130
+7,Proy-2025-modifica,"Luevano, Villagómez y Ocasio",Azerbaiyán,2026,Julio,13,410871.38,758340
+8,Proy-2021-abraza,Corporacin Gamez y Lucero,Comoras,2022,Mayo,5,484641.99,799812
+9,Proy-2020-modifica,Despacho Nazario-Posada,India,2020,Diciembre,8,258869.35,612650
+10,Proy-2024-habilita,Villegas-Nava y Asociados,Comoras,2025,Febrero,22,335928.44,626052
+11,Proy-2018-empodera,"Soria, Armas y Esparza",Lituania,2019,Enero,1,289888.49,663780
+12,Proy-2025-innova,Corona-Arce,India,2025,Julio,18,198864.37,466800
+13,Proy-2016-maximiza,Corporacin Gamez y Lucero,Comoras,2016,Noviembre,5,37836.12,168882
+14,Proy-2020-mejora,Club Leiva-Godoy,Bolivia,2021,Abril,30,40753.1,201300
+15,Proy-2020-crea,Corporacin Gamez y Lucero,Comoras,2020,Julio,9,0.0,0
+16,Proy-2023-maximiza,Club Leiva-Godoy,Bolivia,2024,Febrero,29,388321.06,750456
+17,Proy-2015-orquesta,Grupo Villagómez y Gastélum,Islas Marshall,2016,Febrero,11,45790.62,149680
+18,Proy-2018-utiliza,Heredia y Montero S. R.L. de C.V.,Côte d'Ivoire,2019,Abril,6,505829.94,883476
+19,Proy-2020-orquesta,Corporacin Gamez y Lucero,Comoras,2020,Mayo,26,88155.94,461100
+20,Proy-2017-agrega,"Rosales, Ponce y Barrientos",Uruguay,2018,Julio,8,326623.79,1028368
+21,Proy-2020-facilita,Villegas-Nava y Asociados,Comoras,2020,Noviembre,10,58978.46,218900
+22,Proy-2020-utiliza,Grupo Villagómez y Gastélum,Islas Marshall,2021,Mayo,25,230243.46,634200
+23,Proy-2018-explota,Villalpando A.C.,Islas Marshall,2019,Mayo,31,416146.11,741106
+24,Proy-2018-evoluciona,"Luevano, Villagómez y Ocasio",Azerbaiyán,2018,Diciembre,18,53454.24,354798
+25,Proy-2020-implementa,Corporacin Gamez y Lucero,Comoras,2021,Julio,9,299943.2,870900
+26,Proy-2017-reinventa,Despacho Soto-Macías,Bolivia,2017,Marzo,7,0.0,0
+27,Proy-2017-abraza,"Soria, Armas y Esparza",Lituania,2018,Diciembre,3,93567.46,815488
+28,Proy-2016-itera,Corporacin Gamez y Lucero,Comoras,2016,Agosto,30,28682.52,164472
+29,Proy-2017-mezcla,Corona-Arce,India,2017,Octubre,26,0.0,0
+30,Proy-2017-itera,"Luevano, Villagómez y Ocasio",Azerbaiyán,2018,Octubre,23,183487.92,555236
+31,Proy-2017-evoluciona,Heredia y Montero S. R.L. de C.V.,Côte d'Ivoire,2017,Septiembre,25,32410.74,166804
+32,Proy-2019-empodera,Corporacin Gamez y Lucero,Comoras,2020,Marzo,12,689435.86,1057008
+33,Proy-2019-transiciona,Marroquín S.A. de C.V.,Timor-Leste,2019,Diciembre,15,103200.2,602688
+34,Proy-2022-genera,Gastélum-Puga S.C.,Islas Marshall,2023,Febrero,22,146405.91,714636
+35,Proy-2017-implementa,Corporacin Gamez y Lucero,Comoras,2018,Julio,29,188875.19,373252
+36,Proy-2016-maneja,Páez-Garrido y Asociados,Côte d'Ivoire,2016,Noviembre,6,321786.14,469224
+37,Proy-2019-recontextualiza,Despacho Nazario-Posada,India,2019,Diciembre,25,28852.3,450720
+38,Proy-2017-monetiza,Despacho Sotelo-Rivera,Lituania,2018,Enero,11,32139.24,146256
+39,Proy-2021-incuba,Heredia y Montero S. R.L. de C.V.,Côte d'Ivoire,2023,Enero,22,320465.73,788944
+40,Proy-2017-compromete,Despacho Sotelo-Rivera,Lituania,2018,Febrero,3,47921.07,405504
+41,Proy-2017-agrega,Páez-Garrido y Asociados,Côte d'Ivoire,2017,Septiembre,9,117247.06,330220
+42,Proy-2016-itera,Despacho Nazario-Posada,India,2016,Diciembre,17,64183.2,375816
+43,Proy-2018-crece,Despacho Soto-Macías,Bolivia,2018,Febrero,8,0.0,0
+44,Proy-2019-recontextualiza,Páez-Garrido y Asociados,Côte d'Ivoire,2020,Junio,13,172748.54,972240
+45,Proy-2021-escala,Gastélum-Puga S.C.,Islas Marshall,2022,Mayo,18,140867.8,514644
+46,Proy-2021-libera,Club Leiva-Godoy,Bolivia,2021,Noviembre,13,161173.96,604656
+47,Proy-2020-mejora,Grupo Villagómez y Gastélum,Islas Marshall,2020,Noviembre,11,76855.63,304250
+48,Proy-2021-habilita,Despacho Rocha-Beltrán,Lituania,2021,Agosto,10,184762.65,351104
+49,Proy-2023-modifica,"Luevano, Villagómez y Ocasio",Azerbaiyán,2024,Octubre,18,279763.78,1093624
+50,Proy-2019-escala,Despacho Rocha-Beltrán,Lituania,2020,Abril,9,21384.43,667968
+51,Proy-2016-extiende,Despacho Sotelo-Rivera,Lituania,2016,Agosto,18,224861.46,494424
+52,Proy-2021-innova,Grupo Villagómez y Gastélum,Islas Marshall,2021,Octubre,8,0.0,0
+53,Proy-2019-maneja,Despacho Sotelo-Rivera,Lituania,2020,Septiembre,19,84781.78,1116768
+54,Proy-2023-libera,Club Leiva-Godoy,Bolivia,2024,Febrero,5,39812.01,144760
+55,Proy-2021-abraza,Club Leiva-Godoy,Bolivia,2022,Marzo,11,176610.79,433992
+56,Proy-2022-crece,"Zelaya, Razo y Gamez",Malasia,2023,Junio,11,35904.11,361746
+57,Proy-2015-implementa,Despacho Rocha-Beltrán,Lituania,2016,Septiembre,19,70681.99,289360
+58,Proy-2024-crece,Despacho Rocha-Beltrán,Lituania,2025,Agosto,29,152813.06,1006648
+59,Proy-2016-libera,"Zelaya, Razo y Gamez",Malasia,2017,Febrero,21,13509.28,71190
+60,Proy-2021-implementa,Páez-Garrido y Asociados,Côte d'Ivoire,2022,Julio,17,151084.01,431912
+61,Proy-2022-evoluciona,Gastélum-Puga S.C.,Islas Marshall,2022,Diciembre,23,122125.47,325944
+62,Proy-2021-agrega,Villalpando A.C.,Islas Marshall,2021,Noviembre,15,89746.3,320892
+63,Proy-2021-revoluciona,Despacho Nazario-Posada,India,2021,Septiembre,12,0.0,0
+64,Proy-2022-revoluciona,Páez-Garrido y Asociados,Côte d'Ivoire,2022,Mayo,17,75290.03,340632
+65,Proy-2024-extiende,"Soria, Armas y Esparza",Lituania,2024,Noviembre,25,297891.89,942732
+66,Proy-2017-orquesta,"Zelaya, Razo y Gamez",Malasia,2018,Abril,14,90610.24,273944
+67,Proy-2019-fortalece,Industrias Soto-Moreno,Malasia,2019,Diciembre,25,82536.83,120528
+68,Proy-2022-incuba,"Despacho Aguayo, Dueñas y Rentería",Timor-Leste,2022,Julio,27,55682.42,81540
+69,Proy-2023-itera,Heredia y Montero S. R.L. de C.V.,Côte d'Ivoire,2024,Enero,23,361544.32,691264
+70,Proy-2019-recontextualiza,Despacho Rocha-Beltrán,Lituania,2020,Abril,5,575124.7,772992
+71,Proy-2019-mejora,Gastélum-Puga S.C.,Islas Marshall,2020,Abril,3,63085.01,482688
+72,Proy-2017-crea,Marroquín S.A. de C.V.,Timor-Leste,2017,Agosto,31,223817.97,437492
+73,Proy-2020-maximiza,"Luevano, Villagómez y Ocasio",Azerbaiyán,2020,Octubre,28,331132.13,628300
+74,Proy-2018-cultiva,Páez-Garrido y Asociados,Côte d'Ivoire,2018,Diciembre,11,143334.16,365424
+75,Proy-2024-revoluciona,Corona-Arce,India,2024,Diciembre,1,0.0,0
+76,Proy-2018-transiciona,Despacho Soto-Macías,Bolivia,2018,Noviembre,19,91275.62,408158
+77,Proy-2024-modifica,Páez-Garrido y Asociados,Côte d'Ivoire,2025,Junio,8,389105.26,1411662
+78,Proy-2022-abraza,Páez-Garrido y Asociados,Côte d'Ivoire,2023,Febrero,12,56220.67,246132
+79,Proy-2023-agrega,Club Leiva-Godoy,Bolivia,2023,Junio,9,50534.79,189672
+80,Proy-2017-monetiza,Heredia y Montero S. R.L. de C.V.,Côte d'Ivoire,2018,Agosto,17,82929.74,332904
+81,Proy-2018-empodera,"Rosales, Ponce y Barrientos",Uruguay,2019,Mayo,9,42835.62,171212
+82,Proy-2017-reinventa,"Soria, Armas y Esparza",Lituania,2018,Marzo,3,92546.3,600776
+83,Proy-2016-crece,Club Leiva-Godoy,Bolivia,2016,Octubre,29,21743.53,164388
+84,Proy-2017-evoluciona,Corporacin Gamez y Lucero,Comoras,2017,Julio,3,61247.92,215556
+85,Proy-2021-abraza,Heredia y Montero S. R.L. de C.V.,Côte d'Ivoire,2022,Agosto,20,163499.64,350532
+86,Proy-2021-explota,Despacho Rocha-Beltrán,Lituania,2022,Agosto,15,423520.5,885872
+87,Proy-2021-itera,Despacho Soto-Macías,Bolivia,2022,Marzo,26,36019.25,496444
+88,Proy-2023-fortalece,Despacho Rocha-Beltrán,Lituania,2024,Abril,6,227217.37,455392
+89,Proy-2022-orquesta,"Soria, Armas y Esparza",Lituania,2023,Mayo,19,622234.56,1117638
+90,Proy-2023-maximiza,Despacho Rocha-Beltrán,Lituania,2024,Enero,8,0.0,0
+91,Proy-2025-explota,"Luevano, Villagómez y Ocasio",Azerbaiyán,2026,Julio,18,146718.41,303000
+92,Proy-2025-extiende,"Luevano, Villagómez y Ocasio",Azerbaiyán,2025,Noviembre,10,43579.16,348300
+93,Proy-2016-revoluciona,"Rosales, Ponce y Barrientos",Uruguay,2017,Febrero,4,0.0,0
+94,Proy-2021-incuba,Corporacin Gamez y Lucero,Comoras,2021,Octubre,20,119233.14,325780
+95,Proy-2020-explota,Marroquín S.A. de C.V.,Timor-Leste,2021,Enero,17,2946.54,48250
+96,Proy-2019-escala,Despacho Rocha-Beltrán,Lituania,2019,Junio,15,156286.37,478224
+97,Proy-2017-libera,Grupo Villagómez y Gastélum,Islas Marshall,2017,Septiembre,17,0.0,0
+98,Proy-2023-libera,Marroquín S.A. de C.V.,Timor-Leste,2024,Septiembre,26,233643.65,599144
+99,Proy-2024-optimiza,Villegas-Nava y Asociados,Comoras,2024,Diciembre,17,79951.6,376536
+100,Proy-2025-extiende,"Luevano, Villagómez y Ocasio",Azerbaiyán,2025,Octubre,31,122878.75,482100
+101,Proy-2018-crece,Villalpando A.C.,Islas Marshall,2019,Mayo,11,158812.33,581486
+102,Proy-2018-recontextualiza,Industrias Soto-Moreno,Malasia,2018,Diciembre,19,74001.83,443440
+103,Proy-2024-recontextualiza,Heredia y Montero S. R.L. de C.V.,Côte d'Ivoire,2025,Marzo,20,343976.21,586786
+104,Proy-2018-agrega,"Luevano, Villagómez y Ocasio",Azerbaiyán,2018,Septiembre,21,147159.35,433182
+105,Proy-2017-explota,Despacho Soto-Macías,Bolivia,2018,Enero,10,27318.3,215380
+106,Proy-2017-habilita,"Rosales, Ponce y Barrientos",Uruguay,2017,Junio,28,109186.64,221012
+107,Proy-2024-reinventa,Corporacin Gamez y Lucero,Comoras,2025,Julio,12,255529.38,1442054
+108,Proy-2017-implementa,"Luevano, Villagómez y Ocasio",Azerbaiyán,2017,Julio,24,265509.93,555676
+109,Proy-2021-genera,"Rosales, Ponce y Barrientos",Uruguay,2022,Enero,25,106569.26,853216
+110,Proy-2020-sinergiza,"Zelaya, Razo y Gamez",Malasia,2021,Abril,10,138623.45,1451650
+111,Proy-2021-mezcla,Club Leiva-Godoy,Bolivia,2021,Noviembre,15,73399.36,463112
+112,Proy-2025-compromete,"Despacho Aguayo, Dueñas y Rentería",Timor-Leste,2026,Agosto,8,491925.04,987840
+113,Proy-2022-mezcla,"Luevano, Villagómez y Ocasio",Azerbaiyán,2022,Diciembre,8,259486.59,565164
+114,Proy-2024-recontextualiza,Grupo Villagómez y Gastélum,Islas Marshall,2024,Diciembre,29,89320.76,254446
+115,Proy-2023-itera,Industrias Soto-Moreno,Malasia,2023,Diciembre,10,0.0,0
+116,Proy-2016-agrega,Villalpando A.C.,Islas Marshall,2016,Diciembre,9,0.0,0
+117,Proy-2017-sintetiza,"Luevano, Villagómez y Ocasio",Azerbaiyán,2017,Noviembre,23,187916.9,665588
+118,Proy-2020-compromete,Despacho Soto-Macías,Bolivia,2021,Marzo,22,144994.46,373050
+119,Proy-2020-optimiza,Despacho Soto-Macías,Bolivia,2020,Octubre,5,41850.2,204700
+120,Proy-2024-redefine,"Despacho Aguayo, Dueñas y Rentería",Timor-Leste,2025,Julio,17,297617.09,769254
+121,Proy-2016-utiliza,Despacho Sotelo-Rivera,Lituania,2017,Junio,21,66859.73,565866
+122,Proy-2023-abraza,Corona-Arce,India,2024,Junio,13,0.0,0
+123,Proy-2016-mezcla,Páez-Garrido y Asociados,Côte d'Ivoire,2017,Enero,12,207964.42,569184
+124,Proy-2019-crea,"Zelaya, Razo y Gamez",Malasia,2020,Febrero,14,91631.81,306576
+125,Proy-2019-facilita,Despacho Nazario-Posada,India,2019,Diciembre,2,93893.33,257808
+126,Proy-2019-optimiza,Páez-Garrido y Asociados,Côte d'Ivoire,2019,Julio,13,123756.76,252240
+127,Proy-2016-innova,Despacho Soto-Macías,Bolivia,2016,Octubre,5,61883.36,307440
+128,Proy-2024-facilita,Gastélum-Puga S.C.,Islas Marshall,2025,Marzo,22,137481.11,758698
+129,Proy-2021-modifica,Heredia y Montero S. R.L. de C.V.,Côte d'Ivoire,2022,Mayo,7,98998.02,296296
+130,Proy-2021-crea,"Rosales, Ponce y Barrientos",Uruguay,2021,Octubre,12,69105.98,136344
+131,Proy-2021-reinventa,Villegas-Nava y Asociados,Comoras,2022,Mayo,27,422362.73,962936
+132,Proy-2023-maneja,Villegas-Nava y Asociados,Comoras,2024,Enero,11,111445.59,270536
+133,Proy-2016-optimiza,"Zelaya, Razo y Gamez",Malasia,2017,Julio,7,79509.91,219744
+134,Proy-2022-evoluciona,Heredia y Montero S. R.L. de C.V.,Côte d'Ivoire,2023,Marzo,7,164409.63,538380
+135,Proy-2016-fortalece,"Rosales, Ponce y Barrientos",Uruguay,2017,Marzo,8,32632.36,81522
+136,Proy-2021-orquesta,Despacho Rocha-Beltrán,Lituania,2023,Febrero,5,243678.57,785616
+137,Proy-2023-recontextualiza,Corporacin Gamez y Lucero,Comoras,2024,Diciembre,29,72370.49,1009680
+138,Proy-2018-crea,"Despacho Aguayo, Dueñas y Rentería",Timor-Leste,2018,Octubre,1,88479.58,218730
+139,Proy-2023-itera,Páez-Garrido y Asociados,Côte d'Ivoire,2024,Septiembre,27,389120.34,790944
+140,Proy-2018-escala,Despacho Soto-Macías,Bolivia,2018,Diciembre,11,49182.14,326968
+141,Proy-2023-revoluciona,Despacho Nazario-Posada,India,2023,Agosto,27,19024.21,260624
+142,Proy-2023-genera,Despacho Nazario-Posada,India,2024,Marzo,8,156224.37,1096480
+143,Proy-2019-maximiza,Despacho Soto-Macías,Bolivia,2019,Diciembre,5,9882.48,48528
+144,Proy-2024-incuba,Despacho Nazario-Posada,India,2025,Enero,12,97302.07,1018538
+145,Proy-2016-transforma,Despacho Rocha-Beltrán,Lituania,2016,Noviembre,26,96780.4,257712
+146,Proy-2019-evoluciona,Corporacin Gamez y Lucero,Comoras,2019,Mayo,5,97486.28,333216
+147,Proy-2018-transforma,"Rosales, Ponce y Barrientos",Uruguay,2018,Diciembre,18,150752.51,300518
+148,Proy-2018-fortalece,"Despacho Aguayo, Dueñas y Rentería",Timor-Leste,2018,Agosto,11,73468.55,401304
+149,Proy-2020-incuba,Industrias Soto-Moreno,Malasia,2020,Agosto,20,73957.91,169500
+150,Proy-2020-revoluciona,Corona-Arce,India,2021,Julio,18,177466.27,757200
+151,Proy-2022-genera,Páez-Garrido y Asociados,Côte d'Ivoire,2022,Julio,13,120163.2,235926
+152,Proy-2018-maneja,Gastélum-Puga S.C.,Islas Marshall,2019,Junio,26,35334.67,176688
+153,Proy-2021-modifica,Corona-Arce,India,2021,Diciembre,9,40110.85,163332
+154,Proy-2023-abraza,Marroquín S.A. de C.V.,Timor-Leste,2023,Junio,26,92568.45,170352
+155,Proy-2022-facilita,Corona-Arce,India,2023,Junio,9,446977.6,955098
+156,Proy-2023-extiende,Club Leiva-Godoy,Bolivia,2024,Enero,8,98279.44,275912
+157,Proy-2022-revoluciona,Heredia y Montero S. R.L. de C.V.,Côte d'Ivoire,2023,Mayo,28,130261.17,1169694
+158,Proy-2017-mezcla,Heredia y Montero S. R.L. de C.V.,Côte d'Ivoire,2018,Junio,20,377126.62,716056
+159,Proy-2017-mezcla,"Luevano, Villagómez y Ocasio",Azerbaiyán,2017,Mayo,15,13304.61,63712
+160,Proy-2019-integra,"Rosales, Ponce y Barrientos",Uruguay,2019,Septiembre,16,108089.68,165984
+161,Proy-2016-sintetiza,"Rosales, Ponce y Barrientos",Uruguay,2017,Mayo,20,0.0,0
+162,Proy-2016-revoluciona,Despacho Rocha-Beltrán,Lituania,2016,Julio,27,13578.53,49434
+163,Proy-2020-implementa,Despacho Sotelo-Rivera,Lituania,2020,Diciembre,12,24381.84,61900
+164,Proy-2019-itera,Grupo Villagómez y Gastélum,Islas Marshall,2019,Diciembre,5,179096.91,659760
+165,Proy-2016-escala,"Rosales, Ponce y Barrientos",Uruguay,2017,Junio,6,248153.8,717318
+166,Proy-2016-compromete,"Despacho Aguayo, Dueñas y Rentería",Timor-Leste,2017,Febrero,8,231787.87,671202
+167,Proy-2016-innova,Villalpando A.C.,Islas Marshall,2017,Julio,14,256245.36,686364
+168,Proy-2022-monetiza,"Luevano, Villagómez y Ocasio",Azerbaiyán,2022,Noviembre,24,83378.96,267570
+169,Proy-2021-implementa,Gastélum-Puga S.C.,Islas Marshall,2021,Septiembre,4,32482.48,106756
+170,Proy-2017-utiliza,Páez-Garrido y Asociados,Côte d'Ivoire,2018,Abril,28,581815.55,930336
+171,Proy-2023-compromete,"Zelaya, Razo y Gamez",Malasia,2023,Agosto,6,96006.46,255528
+172,Proy-2018-redefine,Heredia y Montero S. R.L. de C.V.,Côte d'Ivoire,2019,Agosto,6,80499.72,597172
+173,Proy-2020-explota,Industrias Soto-Moreno,Malasia,2021,Abril,27,271921.18,417350
+174,Proy-2016-habilita,"Zelaya, Razo y Gamez",Malasia,2017,Junio,23,90420.77,316386
+175,Proy-2018-agrega,Despacho Soto-Macías,Bolivia,2019,Septiembre,10,142419.26,672106
+176,Proy-2018-escala,Gastélum-Puga S.C.,Islas Marshall,2018,Abril,25,17673.06,83674
+177,Proy-2016-crece,Club Leiva-Godoy,Bolivia,2016,Octubre,22,266381.18,839412
+178,Proy-2021-abraza,Marroquín S.A. de C.V.,Timor-Leste,2021,Diciembre,10,83775.72,381524
+179,Proy-2021-escala,"Despacho Aguayo, Dueñas y Rentería",Timor-Leste,2021,Noviembre,5,231993.36,374036
+180,Proy-2017-monetiza,"Soria, Armas y Esparza",Lituania,2018,Enero,12,73047.43,225104
+181,Proy-2024-mejora,Corporacin Gamez y Lucero,Comoras,2024,Julio,27,0.0,0
+182,Proy-2016-innova,Despacho Nazario-Posada,India,2017,Marzo,13,55353.86,278502
+183,Proy-2017-redefine,Villegas-Nava y Asociados,Comoras,2018,Mayo,23,345733.9,742588
+184,Proy-2016-cultiva,Villegas-Nava y Asociados,Comoras,2017,Marzo,19,115470.23,493206
+185,Proy-2023-integra,Gastélum-Puga S.C.,Islas Marshall,2023,Diciembre,26,168619.71,562240
+186,Proy-2016-facilita,"Zelaya, Razo y Gamez",Malasia,2017,Mayo,19,201954.28,874692
+187,Proy-2025-mejora,Corona-Arce,India,2025,Noviembre,14,52887.12,117960
+188,Proy-2018-revoluciona,Despacho Sotelo-Rivera,Lituania,2019,Julio,16,67588.38,231196
+189,Proy-2020-abraza,Grupo Villagómez y Gastélum,Islas Marshall,2020,Diciembre,10,36553.64,187700
+190,Proy-2024-habilita,Industrias Soto-Moreno,Malasia,2024,Octubre,11,385548.3,618164
+191,Proy-2023-orquesta,Corporacin Gamez y Lucero,Comoras,2024,Febrero,22,305506.74,506352
+192,Proy-2017-transforma,Corona-Arce,India,2017,Agosto,5,100861.21,639012
+193,Proy-2016-compromete,Heredia y Montero S. R.L. de C.V.,Côte d'Ivoire,2016,Junio,23,98392.11,167160
+194,Proy-2016-itera,Páez-Garrido y Asociados,Côte d'Ivoire,2017,Enero,18,0.0,0
+195,Proy-2021-transiciona,Marroquín S.A. de C.V.,Timor-Leste,2022,Marzo,5,64776.69,137332
+196,Proy-2023-transiciona,Despacho Rocha-Beltrán,Lituania,2023,Diciembre,10,155728.56,225960
+197,Proy-2022-mezcla,Páez-Garrido y Asociados,Côte d'Ivoire,2023,Febrero,23,86688.35,301752
+198,Proy-2017-recontextualiza,Páez-Garrido y Asociados,Côte d'Ivoire,2018,Julio,18,155700.63,371272
+199,Proy-2022-transforma,Despacho Nazario-Posada,India,2022,Marzo,8,0.0,0
+200,Proy-2024-escala,Corporacin Gamez y Lucero,Comoras,2025,Mayo,8,193424.37,600532
+201,Proy-2016-genera,Corporacin Gamez y Lucero,Comoras,2016,Julio,29,32862.74,77406
+202,Proy-2016-empodera,Gastélum-Puga S.C.,Islas Marshall,2016,Agosto,5,0.0,0
+203,Proy-2023-sinergiza,Páez-Garrido y Asociados,Côte d'Ivoire,2023,Octubre,21,100533.27,180712
+204,Proy-2021-empodera,Villegas-Nava y Asociados,Comoras,2022,Enero,21,0.0,0
+205,Proy-2022-transforma,Despacho Nazario-Posada,India,2023,Febrero,7,316867.13,999108
+206,Proy-2020-incentiva,Marroquín S.A. de C.V.,Timor-Leste,2021,Junio,14,158254.54,399200
+207,Proy-2016-redefine,Villalpando A.C.,Islas Marshall,2017,Octubre,8,71229.7,1152606
+208,Proy-2021-integra,Industrias Soto-Moreno,Malasia,2021,Noviembre,4,160591.16,318136
+209,Proy-2017-optimiza,Villegas-Nava y Asociados,Comoras,2018,Febrero,9,106326.25,370568
+210,Proy-2023-crea,Heredia y Montero S. R.L. de C.V.,Côte d'Ivoire,2023,Diciembre,19,21275.61,85680
+211,Proy-2023-reinventa,Despacho Nazario-Posada,India,2024,Abril,27,137968.01,362768
+212,Proy-2022-mezcla,Villegas-Nava y Asociados,Comoras,2023,Febrero,13,39868.02,564408
+213,Proy-2022-compromete,Grupo Villagómez y Gastélum,Islas Marshall,2023,Noviembre,11,145044.48,479412
+214,Proy-2016-redefine,Grupo Villagómez y Gastélum,Islas Marshall,2016,Diciembre,18,127444.94,458976
+215,Proy-2025-sintetiza,Despacho Nazario-Posada,India,2026,Enero,4,173670.54,863520
+216,Proy-2025-itera,Gastélum-Puga S.C.,Islas Marshall,2025,Marzo,2,71529.62,145020
+217,Proy-2020-mezcla,Despacho Soto-Macías,Bolivia,2020,Julio,12,40210.84,208350
+218,Proy-2022-recontextualiza,"Soria, Armas y Esparza",Lituania,2023,Agosto,12,89795.35,506574
+219,Proy-2016-integra,"Zelaya, Razo y Gamez",Malasia,2016,Septiembre,30,0.0,0
+220,Proy-2020-mezcla,Villegas-Nava y Asociados,Comoras,2020,Mayo,21,53411.02,181200
+221,Proy-2017-maneja,"Soria, Armas y Esparza",Lituania,2019,Abril,14,98037.27,891342
+222,Proy-2017-mezcla,Marroquín S.A. de C.V.,Timor-Leste,2018,Agosto,3,263983.82,475068
+223,Proy-2021-cultiva,Despacho Nazario-Posada,India,2022,Abril,11,67829.2,536744
+224,Proy-2018-modifica,Despacho Sotelo-Rivera,Lituania,2019,Diciembre,31,273845.54,892170
+225,Proy-2017-maximiza,"Zelaya, Razo y Gamez",Malasia,2018,Marzo,28,95168.45,226908
+226,Proy-2018-innova,Despacho Rocha-Beltrán,Lituania,2019,Mayo,12,299758.88,881452
+227,Proy-2023-revoluciona,"Luevano, Villagómez y Ocasio",Azerbaiyán,2023,Diciembre,7,96069.11,376040
+228,Proy-2017-incuba,Despacho Soto-Macías,Bolivia,2018,Abril,24,16103.22,423676
+229,Proy-2019-incuba,Despacho Nazario-Posada,India,2019,Febrero,18,0.0,0
+230,Proy-2023-explota,Marroquín S.A. de C.V.,Timor-Leste,2024,Marzo,15,317850.76,799848
+231,Proy-2021-visualiza,Corporacin Gamez y Lucero,Comoras,2022,Enero,18,143142.17,560976
+232,Proy-2022-redefine,Marroquín S.A. de C.V.,Timor-Leste,2022,Octubre,9,0.0,0
+233,Proy-2024-integra,"Despacho Aguayo, Dueñas y Rentería",Timor-Leste,2024,Abril,19,70101.69,381582
+234,Proy-2023-abraza,Industrias Soto-Moreno,Malasia,2023,Diciembre,4,45363.82,210728
+235,Proy-2021-explota,Heredia y Montero S. R.L. de C.V.,Côte d'Ivoire,2022,Enero,1,127888.19,435552
+236,Proy-2020-redefine,Corona-Arce,India,2021,Enero,20,153621.16,325900
+237,Proy-2023-reinventa,Industrias Soto-Moreno,Malasia,2024,Marzo,15,149610.37,558096
+238,Proy-2016-evoluciona,Páez-Garrido y Asociados,Côte d'Ivoire,2017,Junio,18,13835.42,264852
+239,Proy-2017-recontextualiza,Corporacin Gamez y Lucero,Comoras,2018,Marzo,9,0.0,0
+240,Proy-2021-innova,Club Leiva-Godoy,Bolivia,2022,Junio,27,239740.26,836576
+241,Proy-2018-incentiva,"Rosales, Ponce y Barrientos",Uruguay,2018,Junio,30,0.0,0
+242,Proy-2024-integra,"Zelaya, Razo y Gamez",Malasia,2025,Junio,3,665039.55,1151010
+243,Proy-2022-extiende,Gastélum-Puga S.C.,Islas Marshall,2022,Noviembre,4,68105.51,243378
+244,Proy-2021-entrega,Despacho Soto-Macías,Bolivia,2021,Octubre,22,108419.69,211848
+245,Proy-2017-entrega,Gastélum-Puga S.C.,Islas Marshall,2018,Noviembre,27,121582.81,446644
+246,Proy-2017-maneja,Despacho Soto-Macías,Bolivia,2018,Mayo,16,204556.51,551408
+247,Proy-2021-monetiza,"Zelaya, Razo y Gamez",Malasia,2022,Febrero,24,42910.26,139048
+248,Proy-2016-fortalece,"Luevano, Villagómez y Ocasio",Azerbaiyán,2017,Abril,6,254729.12,714462
+249,Proy-2023-modifica,Despacho Soto-Macías,Bolivia,2023,Octubre,9,69203.71,437472
+250,Proy-2018-transiciona,Villalpando A.C.,Islas Marshall,2019,Diciembre,27,120926.52,1225394
+251,Proy-2020-mejora,Corporacin Gamez y Lucero,Comoras,2020,Septiembre,16,167562.96,632850
+252,Proy-2019-revoluciona,"Luevano, Villagómez y Ocasio",Azerbaiyán,2019,Abril,14,9887.11,86928
+253,Proy-2018-optimiza,Villegas-Nava y Asociados,Comoras,2019,Octubre,5,300186.75,652372
+254,Proy-2019-revoluciona,"Zelaya, Razo y Gamez",Malasia,2020,Marzo,10,17928.2,129936
+255,Proy-2024-genera,"Despacho Aguayo, Dueñas y Rentería",Timor-Leste,2025,Febrero,11,119783.11,803416
+256,Proy-2022-escala,"Luevano, Villagómez y Ocasio",Azerbaiyán,2023,Abril,21,343769.41,1117746
+257,Proy-2016-innova,"Soria, Armas y Esparza",Lituania,2016,Agosto,7,72519.59,125412
+258,Proy-2019-monetiza,Villegas-Nava y Asociados,Comoras,2019,Junio,12,78549.22,108288
+259,Proy-2021-maximiza,Villegas-Nava y Asociados,Comoras,2022,Mayo,5,393566.97,1186224
+260,Proy-2023-implementa,Páez-Garrido y Asociados,Côte d'Ivoire,2023,Noviembre,10,86706.36,370776
+261,Proy-2020-maneja,Corona-Arce,India,2021,Septiembre,15,121025.91,313700
+262,Proy-2020-orquesta,Corona-Arce,India,2021,Mayo,3,141847.99,233100
+263,Proy-2018-implementa,"Zelaya, Razo y Gamez",Malasia,2019,Agosto,27,101157.79,571688
+264,Proy-2018-utiliza,Despacho Rocha-Beltrán,Lituania,2018,Septiembre,18,212692.14,368506
+265,Proy-2017-orquesta,"Luevano, Villagómez y Ocasio",Azerbaiyán,2018,Enero,28,86719.87,340560
+266,Proy-2018-orquesta,Despacho Nazario-Posada,India,2019,Febrero,2,47581.73,85468
+267,Proy-2020-optimiza,"Rosales, Ponce y Barrientos",Uruguay,2020,Julio,24,109465.08,337350
+268,Proy-2016-abraza,Gastélum-Puga S.C.,Islas Marshall,2016,Diciembre,31,172276.68,330624
+269,Proy-2022-utiliza,Industrias Soto-Moreno,Malasia,2023,Julio,17,130648.13,590814
+270,Proy-2018-habilita,Villegas-Nava y Asociados,Comoras,2020,Febrero,5,166292.94,613226
+271,Proy-2019-maneja,Marroquín S.A. de C.V.,Timor-Leste,2019,Mayo,11,0.0,0
+272,Proy-2019-compromete,Despacho Rocha-Beltrán,Lituania,2020,Octubre,16,43731.9,958224
+273,Proy-2019-sinergiza,Despacho Sotelo-Rivera,Lituania,2019,Noviembre,11,421393.99,611280
+274,Proy-2019-recontextualiza,"Luevano, Villagómez y Ocasio",Azerbaiyán,2019,Junio,6,104626.12,268224
+275,Proy-2025-transiciona,"Rosales, Ponce y Barrientos",Uruguay,2026,Diciembre,14,336626.14,708480
+276,Proy-2016-crece,Grupo Villagómez y Gastélum,Islas Marshall,2016,Julio,29,0.0,0
+277,Proy-2022-transforma,Corona-Arce,India,2023,Enero,20,579436.02,1143558
+278,Proy-2022-implementa,"Soria, Armas y Esparza",Lituania,2022,Noviembre,2,89005.71,620568
+279,Proy-2016-entrega,"Soria, Armas y Esparza",Lituania,2017,Junio,19,316378.64,850332
+280,Proy-2024-optimiza,Páez-Garrido y Asociados,Côte d'Ivoire,2025,Julio,17,71926.84,412728
+281,Proy-2016-sintetiza,Despacho Rocha-Beltrán,Lituania,2017,Abril,27,81348.35,371574
+282,Proy-2020-maneja,Despacho Rocha-Beltrán,Lituania,2021,Mayo,7,162366.74,252700
+283,Proy-2023-crea,Villalpando A.C.,Islas Marshall,2023,Julio,20,221064.99,332640
+284,Proy-2022-libera,Despacho Soto-Macías,Bolivia,2022,Febrero,21,50543.83,127494
+285,Proy-2023-abraza,Despacho Rocha-Beltrán,Lituania,2024,Mayo,5,108719.38,488880
+286,Proy-2018-fortalece,Industrias Soto-Moreno,Malasia,2019,Marzo,3,136043.27,560464
+287,Proy-2021-incuba,Despacho Nazario-Posada,India,2022,Marzo,8,140219.0,358072
+288,Proy-2018-revoluciona,Gastélum-Puga S.C.,Islas Marshall,2018,Mayo,10,120989.12,229586
+289,Proy-2019-evoluciona,Corona-Arce,India,2020,Marzo,3,41053.23,205872
+290,Proy-2023-crece,Despacho Rocha-Beltrán,Lituania,2023,Diciembre,27,97693.23,486304
+291,Proy-2020-facilita,"Luevano, Villagómez y Ocasio",Azerbaiyán,2021,Julio,20,200817.04,519100
+292,Proy-2022-evoluciona,Despacho Sotelo-Rivera,Lituania,2023,Febrero,17,74585.28,198396
+293,Proy-2021-empodera,Corporacin Gamez y Lucero,Comoras,2021,Noviembre,18,215531.69,431912
+294,Proy-2018-optimiza,Despacho Rocha-Beltrán,Lituania,2019,Abril,1,56875.53,133262
+295,Proy-2019-mezcla,"Soria, Armas y Esparza",Lituania,2019,Octubre,18,87489.78,267456
+296,Proy-2022-fortalece,Despacho Nazario-Posada,India,2022,Abril,27,141827.68,321300
+297,Proy-2022-mezcla,Corona-Arce,India,2022,Octubre,22,0.0,0
+298,Proy-2024-crece,Corona-Arce,India,2024,Diciembre,13,199847.76,483314
+299,Proy-2016-empodera,Corona-Arce,India,2017,Abril,23,122717.4,295680
+300,Proy-2019-abraza,"Despacho Aguayo, Dueñas y Rentería",Timor-Leste,2020,Mayo,31,263523.6,483600
+301,Proy-2017-optimiza,Villalpando A.C.,Islas Marshall,2018,Febrero,3,172025.35,466796
+302,Proy-2021-sintetiza,Grupo Villagómez y Gastélum,Islas Marshall,2021,Abril,1,41798.41,143468
+303,Proy-2018-entrega,"Soria, Armas y Esparza",Lituania,2019,Diciembre,31,218559.21,703340
+304,Proy-2024-mejora,Despacho Soto-Macías,Bolivia,2024,Mayo,12,43114.58,194822
+305,Proy-2024-crea,Villalpando A.C.,Islas Marshall,2024,Agosto,24,68589.23,248472
+306,Proy-2019-modifica,Corona-Arce,India,2020,Enero,2,0.0,0
+307,Proy-2021-incentiva,Grupo Villagómez y Gastélum,Islas Marshall,2021,Octubre,26,17353.23,162188
+308,Proy-2022-habilita,"Soria, Armas y Esparza",Lituania,2023,Febrero,23,310934.78,840672
+309,Proy-2017-entrega,"Rosales, Ponce y Barrientos",Uruguay,2018,Mayo,17,443673.78,878284
+310,Proy-2021-abraza,"Rosales, Ponce y Barrientos",Uruguay,2021,Agosto,16,39101.47,87100
+311,Proy-2018-innova,Despacho Sotelo-Rivera,Lituania,2019,Enero,20,258776.5,946220
+312,Proy-2024-genera,"Soria, Armas y Esparza",Lituania,2025,Abril,19,88539.87,990640
+313,Proy-2022-itera,Club Leiva-Godoy,Bolivia,2022,Mayo,21,0.0,0
+314,Proy-2019-integra,"Zelaya, Razo y Gamez",Malasia,2020,Marzo,22,212389.71,704112
+315,Proy-2022-explota,Villalpando A.C.,Islas Marshall,2022,Junio,1,87730.35,379188
+316,Proy-2018-orquesta,Despacho Rocha-Beltrán,Lituania,2019,Enero,9,182160.96,305118
+317,Proy-2017-explota,Villalpando A.C.,Islas Marshall,2018,Febrero,17,154498.46,347336
+318,Proy-2017-agrega,"Luevano, Villagómez y Ocasio",Azerbaiyán,2018,Marzo,25,110114.67,671704
+319,Proy-2016-facilita,"Rosales, Ponce y Barrientos",Uruguay,2016,Octubre,13,0.0,0
+320,Proy-2016-redefine,Corporacin Gamez y Lucero,Comoras,2017,Enero,22,22931.94,125244
+321,Proy-2021-extiende,"Luevano, Villagómez y Ocasio",Azerbaiyán,2022,Febrero,18,138680.59,590772
+322,Proy-2021-extiende,Despacho Sotelo-Rivera,Lituania,2021,Noviembre,28,92129.77,408928
+323,Proy-2021-agrega,Despacho Nazario-Posada,India,2021,Mayo,3,41343.99,115492
+324,Proy-2023-reinventa,Páez-Garrido y Asociados,Côte d'Ivoire,2023,Agosto,10,110966.37,158984
+325,Proy-2017-utiliza,"Zelaya, Razo y Gamez",Malasia,2017,Marzo,16,44240.49,72072
+326,Proy-2022-implementa,Páez-Garrido y Asociados,Côte d'Ivoire,2023,Octubre,8,296458.18,1173366
+327,Proy-2022-mezcla,"Luevano, Villagómez y Ocasio",Azerbaiyán,2023,Agosto,5,138084.48,291816
+328,Proy-2024-escala,Heredia y Montero S. R.L. de C.V.,Côte d'Ivoire,2025,Febrero,17,0.0,0
+329,Proy-2020-maximiza,Heredia y Montero S. R.L. de C.V.,Côte d'Ivoire,2021,Agosto,27,271023.4,687700
+330,Proy-2017-incuba,Despacho Rocha-Beltrán,Lituania,2018,Mayo,3,55444.04,410388
+331,Proy-2021-sinergiza,"Zelaya, Razo y Gamez",Malasia,2022,Marzo,8,60164.76,397852
+332,Proy-2020-evoluciona,Villegas-Nava y Asociados,Comoras,2020,Diciembre,26,84496.87,178500
+333,Proy-2017-evoluciona,Corona-Arce,India,2018,Mayo,9,166185.62,756932
+334,Proy-2017-itera,Grupo Villagómez y Gastélum,Islas Marshall,2017,Septiembre,9,47823.15,299288
+335,Proy-2019-crea,"Despacho Aguayo, Dueñas y Rentería",Timor-Leste,2020,Octubre,30,60748.98,550752
+336,Proy-2016-redefine,Despacho Nazario-Posada,India,2017,Octubre,1,94058.61,305340
+337,Proy-2024-escala,"Rosales, Ponce y Barrientos",Uruguay,2025,Diciembre,30,189761.9,693216
+338,Proy-2018-explota,"Soria, Armas y Esparza",Lituania,2019,Mayo,14,227926.37,1054780
+339,Proy-2018-maneja,"Zelaya, Razo y Gamez",Malasia,2018,Octubre,6,71266.66,110584
+340,Proy-2019-sintetiza,Despacho Sotelo-Rivera,Lituania,2019,Octubre,18,124155.76,485520
+341,Proy-2019-orquesta,"Despacho Aguayo, Dueñas y Rentería",Timor-Leste,2019,Junio,24,44420.25,148704
+342,Proy-2021-reinventa,Club Leiva-Godoy,Bolivia,2021,Diciembre,21,0.0,0
+343,Proy-2018-mejora,Gastélum-Puga S.C.,Islas Marshall,2019,Febrero,22,54338.19,139702
+344,Proy-2017-extiende,"Soria, Armas y Esparza",Lituania,2017,Octubre,13,16169.62,64108
+345,Proy-2021-maneja,Villegas-Nava y Asociados,Comoras,2022,Julio,11,213352.81,577304
+346,Proy-2017-reinventa,Despacho Rocha-Beltrán,Lituania,2018,Diciembre,6,169283.51,626648
+347,Proy-2016-genera,Grupo Villagómez y Gastélum,Islas Marshall,2017,Enero,3,0.0,0
+348,Proy-2019-agrega,"Despacho Aguayo, Dueñas y Rentería",Timor-Leste,2020,Enero,30,0.0,0
+349,Proy-2025-habilita,Despacho Soto-Macías,Bolivia,2025,Septiembre,25,55767.01,374280
+350,Proy-2023-escala,Gastélum-Puga S.C.,Islas Marshall,2023,Septiembre,16,0.0,0
+351,Proy-2017-extiende,Despacho Sotelo-Rivera,Lituania,2018,Mayo,9,381347.27,918940
+352,Proy-2017-incuba,Grupo Villagómez y Gastélum,Islas Marshall,2018,Junio,4,179864.8,516648
+353,Proy-2023-incuba,"Soria, Armas y Esparza",Lituania,2023,Agosto,23,86720.3,412776
+354,Proy-2023-modifica,"Luevano, Villagómez y Ocasio",Azerbaiyán,2024,Julio,30,42872.81,389424
+355,Proy-2018-explota,Heredia y Montero S. R.L. de C.V.,Côte d'Ivoire,2019,Enero,23,174365.98,655086
+356,Proy-2023-explota,Heredia y Montero S. R.L. de C.V.,Côte d'Ivoire,2024,Febrero,18,66413.24,673008
+357,Proy-2025-libera,Despacho Nazario-Posada,India,2026,Mayo,13,237027.37,334140
+358,Proy-2025-sinergiza,Corona-Arce,India,2025,Noviembre,14,37884.91,206820
+359,Proy-2018-empodera,Corporacin Gamez y Lucero,Comoras,2019,Noviembre,14,184363.02,943874
+360,Proy-2021-monetiza,Club Leiva-Godoy,Bolivia,2021,Junio,28,65866.27,277420
+361,Proy-2019-monetiza,"Despacho Aguayo, Dueñas y Rentería",Timor-Leste,2019,Abril,5,34291.8,94128
+362,Proy-2019-innova,Despacho Sotelo-Rivera,Lituania,2020,Abril,19,102766.02,547200
+363,Proy-2018-monetiza,Club Leiva-Godoy,Bolivia,2019,Febrero,9,298726.29,653798
+364,Proy-2019-modifica,"Despacho Aguayo, Dueñas y Rentería",Timor-Leste,2020,Abril,10,225699.09,655200
+365,Proy-2021-evoluciona,Despacho Sotelo-Rivera,Lituania,2021,Noviembre,23,227944.64,638820
+366,Proy-2017-sintetiza,Heredia y Montero S. R.L. de C.V.,Côte d'Ivoire,2018,Mayo,23,178470.93,762124
+367,Proy-2021-maneja,Páez-Garrido y Asociados,Côte d'Ivoire,2022,Diciembre,23,254577.17,998088
+368,Proy-2017-fortalece,Villalpando A.C.,Islas Marshall,2018,Marzo,8,173364.6,428560
+369,Proy-2018-escala,Heredia y Montero S. R.L. de C.V.,Côte d'Ivoire,2019,Junio,18,168823.65,400430
+370,Proy-2022-maximiza,"Luevano, Villagómez y Ocasio",Azerbaiyán,2022,Diciembre,7,171992.16,251748
+371,Proy-2019-transiciona,Villalpando A.C.,Islas Marshall,2020,Octubre,30,215818.34,553440
+372,Proy-2024-facilita,Grupo Villagómez y Gastélum,Islas Marshall,2024,Noviembre,6,362882.26,652964
+373,Proy-2019-libera,"Soria, Armas y Esparza",Lituania,2019,Septiembre,13,70876.67,162528
+374,Proy-2024-sinergiza,Despacho Nazario-Posada,India,2025,Abril,18,421499.27,1283134
+375,Proy-2016-mejora,"Soria, Armas y Esparza",Lituania,2017,Marzo,8,236225.25,503202
+376,Proy-2019-compromete,"Soria, Armas y Esparza",Lituania,2020,Julio,28,237788.25,357072
+377,Proy-2020-monetiza,Industrias Soto-Moreno,Malasia,2021,Septiembre,12,398687.25,896500
+378,Proy-2017-transiciona,Villalpando A.C.,Islas Marshall,2018,Mayo,31,116062.17,622468
+379,Proy-2021-incentiva,"Despacho Aguayo, Dueñas y Rentería",Timor-Leste,2021,Noviembre,11,325411.59,936208
+380,Proy-2021-explota,Club Leiva-Godoy,Bolivia,2021,Noviembre,24,207814.17,638352
+381,Proy-2024-redefine,Corona-Arce,India,2024,Septiembre,15,128048.46,342896
+382,Proy-2023-monetiza,Despacho Soto-Macías,Bolivia,2025,Enero,2,267057.59,865200
+383,Proy-2022-optimiza,Villegas-Nava y Asociados,Comoras,2022,Octubre,6,48723.49,199476
+384,Proy-2021-mezcla,Páez-Garrido y Asociados,Côte d'Ivoire,2021,Abril,21,70573.43,256360
+385,Proy-2017-mejora,Club Leiva-Godoy,Bolivia,2017,Octubre,12,103964.54,292160
+386,Proy-2023-cultiva,"Rosales, Ponce y Barrientos",Uruguay,2024,Febrero,7,36882.71,334600
+387,Proy-2017-innova,Villegas-Nava y Asociados,Comoras,2018,Febrero,28,0.0,0
+388,Proy-2019-mejora,Industrias Soto-Moreno,Malasia,2019,Octubre,21,0.0,0
+389,Proy-2021-sintetiza,Marroquín S.A. de C.V.,Timor-Leste,2022,Abril,2,551971.96,1105780
+390,Proy-2019-recontextualiza,Villegas-Nava y Asociados,Comoras,2019,Agosto,25,193283.27,526608
+391,Proy-2023-monetiza,Corporacin Gamez y Lucero,Comoras,2023,Mayo,23,12662.83,86464
+392,Proy-2019-transforma,"Despacho Aguayo, Dueñas y Rentería",Timor-Leste,2020,Junio,7,251634.94,545040
+393,Proy-2023-sintetiza,"Despacho Aguayo, Dueñas y Rentería",Timor-Leste,2023,Noviembre,6,88940.57,936824
+394,Proy-2016-escala,Despacho Rocha-Beltrán,Lituania,2017,Junio,27,272326.72,382620
+395,Proy-2024-mezcla,Villalpando A.C.,Islas Marshall,2025,Marzo,15,175978.74,1216028
+396,Proy-2018-empodera,Gastélum-Puga S.C.,Islas Marshall,2019,Abril,17,118469.34,212428
+397,Proy-2021-crece,Villalpando A.C.,Islas Marshall,2022,Abril,13,356158.77,1055964
+398,Proy-2018-incuba,Villegas-Nava y Asociados,Comoras,2018,Mayo,1,13943.76,158884
+399,Proy-2016-facilita,"Despacho Aguayo, Dueñas y Rentería",Timor-Leste,2017,Junio,12,303737.99,697326
+400,Proy-2016-orquesta,"Soria, Armas y Esparza",Lituania,2017,Junio,30,80382.28,585816
+401,Proy-2016-innova,Villegas-Nava y Asociados,Comoras,2017,Mayo,26,66282.48,439908
+402,Proy-2020-sintetiza,Despacho Nazario-Posada,India,2020,Diciembre,25,151242.47,472300
+403,Proy-2025-genera,"Despacho Aguayo, Dueñas y Rentería",Timor-Leste,2026,Abril,23,380986.37,696540
+404,Proy-2017-reinventa,Grupo Villagómez y Gastélum,Islas Marshall,2017,Junio,18,63237.97,211552
+405,Proy-2019-entrega,Corona-Arce,India,2019,Abril,10,17586.4,77664
+406,Proy-2019-fortalece,Corona-Arce,India,2019,Agosto,17,128665.07,418512
+407,Proy-2022-modifica,"Soria, Armas y Esparza",Lituania,2023,Julio,15,200090.5,425628
+408,Proy-2020-transforma,"Zelaya, Razo y Gamez",Malasia,2021,Octubre,2,185628.3,492450
+409,Proy-2021-genera,"Luevano, Villagómez y Ocasio",Azerbaiyán,2022,Febrero,1,133090.45,494572
+410,Proy-2025-reinventa,Gastélum-Puga S.C.,Islas Marshall,2026,Octubre,29,129891.06,511980
+411,Proy-2020-visualiza,Páez-Garrido y Asociados,Côte d'Ivoire,2021,Febrero,4,0.0,0
+412,Proy-2017-visualiza,Despacho Nazario-Posada,India,2017,Septiembre,26,66576.85,212344
+413,Proy-2022-explota,Villalpando A.C.,Islas Marshall,2022,Mayo,18,15056.36,75168
+414,Proy-2020-maximiza,Heredia y Montero S. R.L. de C.V.,Côte d'Ivoire,2020,Julio,21,69152.72,146400
+415,Proy-2017-compromete,"Soria, Armas y Esparza",Lituania,2018,Abril,22,89234.99,425172
+416,Proy-2019-optimiza,"Zelaya, Razo y Gamez",Malasia,2019,Noviembre,10,164859.04,334416
+417,Proy-2020-redefine,Grupo Villagómez y Gastélum,Islas Marshall,2020,Noviembre,8,95487.45,207550
+418,Proy-2020-sintetiza,Despacho Nazario-Posada,India,2020,Junio,17,32064.6,189450
+419,Proy-2018-explota,"Despacho Aguayo, Dueñas y Rentería",Timor-Leste,2018,Febrero,26,43958.94,97060
+420,Proy-2017-fortalece,Gastélum-Puga S.C.,Islas Marshall,2018,Febrero,7,21944.7,284020
+421,Proy-2025-explota,Corona-Arce,India,2026,Agosto,30,325502.86,861600
+422,Proy-2017-fortalece,Despacho Rocha-Beltrán,Lituania,2017,Noviembre,18,128210.26,196108
+423,Proy-2016-sintetiza,Heredia y Montero S. R.L. de C.V.,Côte d'Ivoire,2016,Octubre,9,105366.8,243558
+424,Proy-2017-evoluciona,Despacho Soto-Macías,Bolivia,2018,Febrero,6,79950.72,302720
+425,Proy-2022-monetiza,Despacho Soto-Macías,Bolivia,2023,Julio,21,257572.52,436752
+426,Proy-2017-abraza,Corporacin Gamez y Lucero,Comoras,2018,Marzo,16,0.0,0
+427,Proy-2015-empodera,Despacho Sotelo-Rivera,Lituania,2016,Mayo,14,0.0,0
+428,Proy-2024-transiciona,Villalpando A.C.,Islas Marshall,2024,Septiembre,24,54893.42,195576
+429,Proy-2021-libera,Villegas-Nava y Asociados,Comoras,2021,Septiembre,12,50889.05,106340
+430,Proy-2024-empodera,Heredia y Montero S. R.L. de C.V.,Côte d'Ivoire,2025,Abril,20,203627.96,407914
+431,Proy-2016-redefine,"Soria, Armas y Esparza",Lituania,2016,Diciembre,4,116081.83,347424
+432,Proy-2017-crea,Páez-Garrido y Asociados,Côte d'Ivoire,2018,Noviembre,30,158963.62,390060
+433,Proy-2023-sintetiza,Despacho Sotelo-Rivera,Lituania,2023,Julio,13,9786.02,229320
+434,Proy-2021-empodera,Corona-Arce,India,2022,Mayo,14,368067.61,783016
+435,Proy-2018-cultiva,Heredia y Montero S. R.L. de C.V.,Côte d'Ivoire,2019,Agosto,3,360626.83,792304
+436,Proy-2017-evoluciona,Despacho Soto-Macías,Bolivia,2017,Agosto,6,53642.83,108724
+437,Proy-2024-integra,Corona-Arce,India,2025,Junio,22,225831.82,414526
+438,Proy-2020-maximiza,Villegas-Nava y Asociados,Comoras,2020,Septiembre,26,293049.61,597950
+439,Proy-2020-incuba,Heredia y Montero S. R.L. de C.V.,Côte d'Ivoire,2020,Abril,29,0.0,0
+440,Proy-2016-agrega,Corona-Arce,India,2017,Agosto,14,98551.86,1037610
+441,Proy-2019-redefine,"Rosales, Ponce y Barrientos",Uruguay,2020,Febrero,2,114215.55,236592
+442,Proy-2022-extiende,Despacho Nazario-Posada,India,2023,Diciembre,8,311121.78,1127844
+443,Proy-2025-sinergiza,Corona-Arce,India,2026,Septiembre,12,89982.58,510480
+444,Proy-2017-entrega,"Luevano, Villagómez y Ocasio",Azerbaiyán,2018,Julio,14,125715.45,345092
+445,Proy-2018-sinergiza,Despacho Sotelo-Rivera,Lituania,2019,Septiembre,4,198815.25,647588
+446,Proy-2024-incuba,"Zelaya, Razo y Gamez",Malasia,2024,Diciembre,11,235617.76,812986
+447,Proy-2024-crece,Corporacin Gamez y Lucero,Comoras,2025,Febrero,17,265616.6,741066
+448,Proy-2021-redefine,Despacho Rocha-Beltrán,Lituania,2021,Agosto,21,253961.12,635336
+449,Proy-2023-revoluciona,Villegas-Nava y Asociados,Comoras,2023,Septiembre,24,174782.04,266112
+450,Proy-2021-genera,"Soria, Armas y Esparza",Lituania,2021,Julio,24,0.0,0
+451,Proy-2020-transiciona,Villegas-Nava y Asociados,Comoras,2021,Noviembre,26,271650.49,493800
+452,Proy-2022-sinergiza,Marroquín S.A. de C.V.,Timor-Leste,2022,Abril,22,33736.97,92502
+453,Proy-2023-sinergiza,Despacho Rocha-Beltrán,Lituania,2024,Abril,16,357087.73,584640
+454,Proy-2018-genera,Despacho Sotelo-Rivera,Lituania,2019,Enero,22,170466.72,336996
+455,Proy-2023-revoluciona,Gastélum-Puga S.C.,Islas Marshall,2023,Julio,30,64564.13,146328
+456,Proy-2015-mezcla,Industrias Soto-Moreno,Malasia,2016,Junio,23,112325.51,255920
+457,Proy-2024-empodera,"Despacho Aguayo, Dueñas y Rentería",Timor-Leste,2025,Junio,20,222043.29,810956
+458,Proy-2015-sinergiza,Grupo Villagómez y Gastélum,Islas Marshall,2016,Enero,23,27113.99,129040
+459,Proy-2018-fortalece,Marroquín S.A. de C.V.,Timor-Leste,2018,Noviembre,25,35097.12,120060
+460,Proy-2023-empodera,Corona-Arce,India,2023,Junio,6,54708.04,131208
+461,Proy-2017-transforma,Marroquín S.A. de C.V.,Timor-Leste,2018,Abril,19,66661.24,156684
+462,Proy-2023-extiende,Despacho Sotelo-Rivera,Lituania,2023,Julio,5,0.0,0
+463,Proy-2020-genera,"Zelaya, Razo y Gamez",Malasia,2020,Diciembre,24,149855.69,352950
+464,Proy-2022-transiciona,Club Leiva-Godoy,Bolivia,2023,Enero,31,98026.68,421794
+465,Proy-2016-genera,Grupo Villagómez y Gastélum,Islas Marshall,2016,Diciembre,29,15315.31,426090
+466,Proy-2017-monetiza,"Soria, Armas y Esparza",Lituania,2017,Agosto,25,184416.51,351780
+467,Proy-2017-mejora,Despacho Soto-Macías,Bolivia,2018,Abril,7,127964.81,311080
+468,Proy-2022-implementa,"Zelaya, Razo y Gamez",Malasia,2023,Agosto,14,384484.54,1183788
+469,Proy-2024-sinergiza,Páez-Garrido y Asociados,Côte d'Ivoire,2024,Diciembre,4,101004.12,329614
